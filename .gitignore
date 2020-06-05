@@ -41,4 +41,5 @@ src/ncurses/.deps/
 src/ncurses/.libs/
 src/ncurses/Makefile
 stamp-h1
-
+Doxyfile
+*~
