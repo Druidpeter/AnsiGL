@@ -1,0 +1,129 @@
+.TH "AnsiGL::Content" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Content
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits enable_shared_from_this< Content >\&.
+.PP
+Inherited by \fBAnsiGL::Animation\fP, \fBAnsiGL::Camera\fP, \fBAnsiGL::Clone\fP, \fBAnsiGL::Context\fP\fC [virtual]\fP, \fBAnsiGL::Image\fP, \fBAnsiGL::InputText\fP, \fBAnsiGL::Text\fP, and \fBAnsiGL::Window\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBContent\fP (Context_Ptr container)"
+.br
+.ti -1c
+.RI "Context_Ptr \fBContainer\fP () const"
+.br
+.ti -1c
+.RI "void \fBContainer\fP (Context_Ptr container)"
+.br
+.ti -1c
+.RI "template<class tContentType > std::shared_ptr< tContentType > \fBMorph\fP ()"
+.br
+.ti -1c
+.RI "virtual const \fBPoint3D\fP \fBCurPos\fP () const"
+.br
+.ti -1c
+.RI "virtual const tPointType \fBX\fP () const"
+.br
+.ti -1c
+.RI "virtual const tPointType \fBY\fP () const"
+.br
+.ti -1c
+.RI "virtual const tPointType \fBZ\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBMove\fP (const \fBPoint3D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual void \fBMove\fP (const \fBPoint2D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual void \fBMoveTo\fP (const \fBPoint3D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual void \fBMoveTo\fP (const \fBPoint2D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual const \fBArea2D\fP & \fBSize\fP () const"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBWidth\fP () const"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBHeight\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBWidth\fP (tSizeType width)"
+.br
+.ti -1c
+.RI "virtual void \fBHeight\fP (tSizeType height)"
+.br
+.ti -1c
+.RI "virtual void \fBResize\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "virtual bool \fBVisible\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBVisible\fP (bool visible)"
+.br
+.ti -1c
+.RI "virtual void \fBRemoveFromContext\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBstr\fP ()=0"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBRenderToSurface\fP (Surface::Ptr dest, const \fBPoint2D\fP &pos=\fBPoint2D\fP()) const =0"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPoint2D\fP \fBOffset\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtriggerContextRecalc\fP () const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Context_wPtr \fB_Container\fP"
+.br
+.ti -1c
+.RI "ContentMarker_wPtr \fB_ContentMarker\fP"
+.br
+.ti -1c
+.RI "\fBArea2D\fP \fB_Size\fP"
+.br
+.ti -1c
+.RI "bool \fB_Visible\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBContext\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

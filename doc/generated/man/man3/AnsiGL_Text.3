@@ -1,0 +1,235 @@
+.TH "AnsiGL::Text" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Text
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Content\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef astring::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef astring::const_iterator \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef astring::reverse_iterator \fBreverse_iterator\fP"
+.br
+.ti -1c
+.RI "typedef astring::const_reverse_iterator \fBconst_reverse_iterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBText\fP (tSizeType width, ENUM_TxtAlign alignment=TxtAlign_Default, ENUM_ColorDepth colorDepth=ColorDepth_Default, bool transparentSpaces=false, bool autoHeight=true)"
+.br
+.ti -1c
+.RI "\fBText\fP (const \fBastring\fP &text, tSizeType width=0, ENUM_TxtAlign alignment=TxtAlign_Default, ENUM_ColorDepth colorDepth=ColorDepth_Default, bool transparentSpaces=false, bool autoHeight=true)"
+.br
+.ti -1c
+.RI "\fBText\fP (const \fBustring\fP &text, tSizeType width=0, ENUM_TxtAlign alignment=TxtAlign_Default, ENUM_ColorDepth colorDepth=ColorDepth_Default, bool transparentSpaces=false, bool autoHeight=true)"
+.br
+.ti -1c
+.RI "\fBText\fP (const std::string &text, tSizeType width=0, ENUM_TxtAlign alignment=TxtAlign_Default, ENUM_ColorDepth colorDepth=ColorDepth_Default, bool transparentSpaces=false, bool autoHeight=true)"
+.br
+.ti -1c
+.RI "iterator \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "reverse_iterator \fBrbegin\fP ()"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBrbegin\fP () const"
+.br
+.ti -1c
+.RI "iterator \fBend\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBend\fP () const"
+.br
+.ti -1c
+.RI "reverse_iterator \fBrend\fP ()"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBrend\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBFormat\fP ()"
+.br
+.ti -1c
+.RI "tSizeType \fBLastLineLength\fP () const"
+.br
+.ti -1c
+.RI "const \fBastring\fP & \fBValue\fP () const"
+.br
+.ti -1c
+.RI "const \fBastring\fP & \fBFormattedValue\fP () const"
+.br
+.ti -1c
+.RI "void \fBValue\fP (const \fBastring\fP &text)"
+.br
+.ti -1c
+.RI "void \fBValue\fP (const \fBustring\fP &text)"
+.br
+.ti -1c
+.RI "void \fBValue\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "void \fBAppend\fP (const \fBastring\fP &text)"
+.br
+.ti -1c
+.RI "void \fBAppend\fP (const \fBustring\fP &text)"
+.br
+.ti -1c
+.RI "void \fBAppend\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "void \fBAppend\fP (const \fBachar\fP &ch)"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.ti -1c
+.RI "void \fBpush_back\fP (const \fBachar\fP &ch)"
+.br
+.ti -1c
+.RI "void \fBpop_back\fP ()"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "ENUM_TxtAlign \fBAlign\fP () const"
+.br
+.ti -1c
+.RI "void \fBAlign\fP (ENUM_TxtAlign align)"
+.br
+.ti -1c
+.RI "virtual tSizeType \fBLength\fP () const"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBWidth\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBWidth\fP (tSizeType width)"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBHeight\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBHeight\fP (tSizeType height)"
+.br
+.ti -1c
+.RI "virtual void \fBResize\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "virtual std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBRenderToSurface\fP (Surface::Ptr dest, const \fBPoint2D\fP &pos=\fBPoint2D\fP()) const"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (void *val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (bool val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (char val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (unsigned char val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (short val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (unsigned short val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (int val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (unsigned int val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (long val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (unsigned long val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (float val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (double val)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (const char *right)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (const \fBustring\fP &right)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (const \fBachar\fP &right)"
+.br
+.ti -1c
+.RI "\fBText\fP & \fBoperator<<\fP (const \fBastring\fP &right)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBAutoHeight\fP"
+.br
+.ti -1c
+.RI "bool \fBTransparentSpaces\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename tDataType > \fBText\fP & \fBaddToStream\fP (tDataType val)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBastring\fP \fB_Text\fP"
+.br
+.ti -1c
+.RI "\fBastring\fP \fB_FormattedText\fP"
+.br
+.ti -1c
+.RI "ENUM_TxtAlign \fB_Alignment\fP"
+.br
+.ti -1c
+.RI "ENUM_ColorDepth \fB_ColorDepth\fP"
+.br
+.ti -1c
+.RI "tSizeType \fB_LastLineLength\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

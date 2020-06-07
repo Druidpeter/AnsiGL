@@ -1,0 +1,56 @@
+\hypertarget{classAnsiGL_1_1ncurses}{}\doxysection{Ansi\+GL\+::ncurses Class Reference}
+\label{classAnsiGL_1_1ncurses}\index{AnsiGL::ncurses@{AnsiGL::ncurses}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_a0f5dc1ca4607c60ed068b3d7f790b566}\label{classAnsiGL_1_1ncurses_a0f5dc1ca4607c60ed068b3d7f790b566}} 
+typedef std\+::map$<$ Color\+Def\+::\+Ptr, int $>$ {\bfseries t\+Color\+Palette}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_a4b01b4c5d65cc65e6745a9ac5e49fd03}\label{classAnsiGL_1_1ncurses_a4b01b4c5d65cc65e6745a9ac5e49fd03}} 
+{\bfseries ncurses} (bool set\+Locale=true)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_aafb19687f678a1b657bed22f993c3721}\label{classAnsiGL_1_1ncurses_aafb19687f678a1b657bed22f993c3721}} 
+\mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} {\bfseries Size} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_a8460f94140b94b1387046c9dd2e40e76}\label{classAnsiGL_1_1ncurses_a8460f94140b94b1387046c9dd2e40e76}} 
+void {\bfseries Refresh} (Context\+::\+Ptr content=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_a932be7fe67abdefd2c6c665211e34102}\label{classAnsiGL_1_1ncurses_a932be7fe67abdefd2c6c665211e34102}} 
+int {\bfseries Get\+Ch} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_aa9870fc74d4a2080802b12d07e10c7ae}\label{classAnsiGL_1_1ncurses_aa9870fc74d4a2080802b12d07e10c7ae}} 
+static int {\bfseries Color\+Pair} (const \mbox{\hyperlink{classAnsiGL_1_1ColorDef}{Color\+Def}} \&color)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_aadfaca05f9d85e09c7610c48f7e3bbd0}\label{classAnsiGL_1_1ncurses_aadfaca05f9d85e09c7610c48f7e3bbd0}} 
+static void {\bfseries Render\+Surface} (Surface\+::\+Ptr src, W\+I\+N\+D\+OW $\ast$dest, \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(0, 0), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_a7471d8747e2383b18e002a9a5f384ce1}\label{classAnsiGL_1_1ncurses_a7471d8747e2383b18e002a9a5f384ce1}} 
+static attr\+\_\+t {\bfseries Attributes} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&ach)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_adf0e98f6dc0bddfec280a1295dd8dd41}\label{classAnsiGL_1_1ncurses_adf0e98f6dc0bddfec280a1295dd8dd41}} 
+static t\+Color\+Palette {\bfseries Color\+Palette}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_a7dba8d154e72ebe290713b811dae5e39}\label{classAnsiGL_1_1ncurses_a7dba8d154e72ebe290713b811dae5e39}} 
+static constexpr short {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+P\+A\+IR} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1ncurses_ad9b690eebee281a38e14fc0794995d00}\label{classAnsiGL_1_1ncurses_ad9b690eebee281a38e14fc0794995d00}} 
+Surface\+::\+Ptr {\bfseries \+\_\+\+Screen}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/ncurses/ncurses.\+h\item 
+src/ncurses/ncurses.\+cpp\end{DoxyCompactItemize}

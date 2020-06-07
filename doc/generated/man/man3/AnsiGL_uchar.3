@@ -1,0 +1,109 @@
+.TH "AnsiGL::uchar" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::uchar \- An encapsulation of a unicode character\&. A UTF-8 'char' always of the same physical width(1) regardless of the width of its glyph\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <uchar\&.h>\fP
+.PP
+Inherited by \fBAnsiGL::achar\fP, and \fBAnsiGL::Pixel\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBuchar\fP & \fBoperator=\fP (const \fBachar\fP &right)"
+.br
+.ti -1c
+.RI "\fBuchar\fP & \fBoperator=\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBuchar\fP & \fBoperator=\fP (const unsigned char &right)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBuchar\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBuchar\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBachar\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBachar\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const unsigned char &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const unsigned char &right) const"
+.br
+.ti -1c
+.RI "void \fBGlyph\fP (const \fBuchar\fP &glyph)"
+.br
+.ti -1c
+.RI "void \fBGlyph\fP (const \fBachar\fP &glyph)"
+.br
+.ti -1c
+.RI "void \fBGlyph\fP (const std::string &glyph)"
+.br
+.RI "Takes the first valid UTF-8 character and assigns it as our glyph\&. "
+.ti -1c
+.RI "void \fBGlyph\fP (unsigned char glyph)"
+.br
+.ti -1c
+.RI "\fBuchar\fP (const \fBachar\fP &glyph)"
+.br
+.ti -1c
+.RI "\fBuchar\fP (const std::string &glyph)"
+.br
+.ti -1c
+.RI "\fBuchar\fP (unsigned char glyph)"
+.br
+.ti -1c
+.RI "char & \fBoperator<<\fP (const \fBachar\fP &right)"
+.br
+.ti -1c
+.RI "\fBuchar\fP & \fBoperator<<\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBuchar\fP & \fBoperator<<\fP (const unsigned char &right)"
+.br
+.ti -1c
+.RI "const std::string & \fBGlyph\fP () const"
+.br
+.ti -1c
+.RI "bool \fBIsSpace\fP () const"
+.br
+.RI "Returns 'true' if the glyph is whitespace\&. "
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBRender\fP () const"
+.br
+.RI "Simply returns the glyph\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fB_UTF8\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An encapsulation of a unicode character\&. A UTF-8 'char' always of the same physical width(1) regardless of the width of its glyph\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

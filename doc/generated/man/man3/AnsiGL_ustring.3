@@ -1,0 +1,121 @@
+.TH "AnsiGL::ustring" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::ustring \- A perfect std::string implementation for uchar\&. (ideally)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <string\&.h>\fP
+.PP
+Inherits \fBAnsiGL::String< uchar >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBustring\fP (const \fBastring\fP &str)"
+.br
+.ti -1c
+.RI "\fBustring\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "bool \fBcompare\fP (const \fBastring\fP &right) const"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator=\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator+=\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator+=\fP (const \fBustring\fP &right)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator=\fP (const \fBastring\fP &right)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator+=\fP (const \fBastring\fP &right)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (bool val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (char val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (unsigned char val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (short val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (unsigned short val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (int val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (unsigned int val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (long val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (unsigned long val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (float val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (double val)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (const char *right)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (const \fBustring\fP &right)"
+.br
+.ti -1c
+.RI "\fBustring\fP & \fBoperator<<\fP (const \fBastring\fP &right)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBastring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBastring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBustring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBustring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const std::string &right) const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename tDataType > \fBustring\fP & \fBaddToStream\fP (tDataType val)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A perfect std::string implementation for uchar\&. (ideally)\&. 
+
+ustring is an extension of \fBString< uchar >\fP\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

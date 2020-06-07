@@ -1,0 +1,175 @@
+.TH "AnsiGL::achar" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::achar \- An ANSI-Enabled UTF-8 character\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <achar\&.h>\fP
+.PP
+Inherits \fBAnsiGL::uchar\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBachar\fP (const \fBColorDef\fP &color)"
+.br
+.ti -1c
+.RI "\fBachar\fP (const \fBColorDef\fP &color, bool bell)"
+.br
+.ti -1c
+.RI "\fBachar\fP (const \fBustring\fP &glyphWithColor, const \fBachar\fP &prevColor=\fBachar\fP(), const tColorCode *colorCodes=DefaultColorCodes)"
+.br
+.ti -1c
+.RI "\fBachar\fP (const std::string &glyphWithColor, const \fBachar\fP &prevColor=\fBachar\fP(), const tColorCode *colorCodes=DefaultColorCodes)"
+.br
+.ti -1c
+.RI "\fBachar\fP (const \fBuchar\fP &glyph)"
+.br
+.ti -1c
+.RI "\fBachar\fP (const char ch)"
+.br
+.ti -1c
+.RI "void \fBassign\fP (const \fBustring\fP &right, const \fBachar\fP &prevColor=\fBachar\fP(), const tColorCode *colorCodes=DefaultColorCodes)"
+.br
+.ti -1c
+.RI "void \fBassign\fP (const std::string &right, const \fBachar\fP &prevColor=\fBachar\fP(), const tColorCode *colorCodes=DefaultColorCodes)"
+.br
+.ti -1c
+.RI "\fBachar\fP & \fBoperator=\fP (const \fBustring\fP &right)"
+.br
+.ti -1c
+.RI "\fBachar\fP & \fBoperator=\fP (const \fBuchar\fP &right)"
+.br
+.ti -1c
+.RI "\fBachar\fP & \fBoperator=\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBachar\fP & \fBoperator<<\fP (const \fBustring\fP &right)"
+.br
+.ti -1c
+.RI "\fBachar\fP & \fBoperator<<\fP (const \fBuchar\fP &right)"
+.br
+.ti -1c
+.RI "\fBachar\fP & \fBoperator<<\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBachar\fP & \fBoperator<<\fP (const char *right)"
+.br
+.ti -1c
+.RI "\fBachar\fP & \fBoperator<<\fP (const char right)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBachar\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBachar\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBustring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBustring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBuchar\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBuchar\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const char &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const char &right) const"
+.br
+.ti -1c
+.RI "const \fBANSICodeList\fP \fBAttributes\fP () const"
+.br
+.ti -1c
+.RI "bool \fBHasAttribute\fP (ENUM_ANSICodes attrib) const"
+.br
+.ti -1c
+.RI "void \fBCopyAttributes\fP (const \fBANSICodeList\fP &attrib)"
+.br
+.ti -1c
+.RI "void \fBAddAttribute\fP (ENUM_ANSICodes attrib)"
+.br
+.ti -1c
+.RI "void \fBAddAttributes\fP (const \fBANSICodeList\fP &attrib)"
+.br
+.ti -1c
+.RI "void \fBRemoveAttribute\fP (ENUM_ANSICodes attrib)"
+.br
+.ti -1c
+.RI "void \fBRemoveAttributes\fP (const \fBANSICodeList\fP &attrib)"
+.br
+.ti -1c
+.RI "bool \fBHasAnsi\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBRenderAnsi\fP (ENUM_ColorDepth desiredDepth=ColorDepth_Default) const"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP (ENUM_ColorDepth desiredDepth=ColorDepth_Default, bool enableAnsi=true, bool enableBell=true) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBColorDef\fP \fBColor\fP"
+.br
+.ti -1c
+.RI "bool \fBBell\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitBannedAttributes\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBANSICodeList\fP \fB_Attributes\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static ANSICodeList::Ptr \fB_BannedAttributes\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBSurface\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An ANSI-Enabled UTF-8 character\&. 
+
+An 'achar' is simply a standard 'char' paired with a list of ANSI codes\&. This is absolutely the most basic element of AnsiGL\&. Even though no other classes are directly based upon achar, all other AnsiGL classes will be affected by changes to this class\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

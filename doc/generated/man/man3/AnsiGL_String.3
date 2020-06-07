@@ -1,0 +1,249 @@
+.TH "AnsiGL::String< tCharType >" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::String< tCharType > \- A std::string-esque foundation that allows for potentially elaborate glyphs\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <string\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBString\fP< tCharType > \fBtString\fP"
+.br
+.ti -1c
+.RI "typedef std::vector< tCharType > \fBtVector\fP"
+.br
+.ti -1c
+.RI "typedef tVector::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef tVector::reverse_iterator \fBreverse_iterator\fP"
+.br
+.ti -1c
+.RI "typedef tVector::const_iterator \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef tVector::const_reverse_iterator \fBconst_reverse_iterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBString\fP (int reserveSize)"
+.br
+.ti -1c
+.RI "\fBString\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "\fBString\fP (const char *str)"
+.br
+.ti -1c
+.RI "tCharType & \fBoperator[]\fP (size_t pos)"
+.br
+.ti -1c
+.RI "const tCharType & \fBoperator[]\fP (size_t pos) const"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator+=\fP (const \fBtString\fP &right)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBtString\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBtString\fP &right) const"
+.br
+.ti -1c
+.RI "iterator \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "iterator \fBend\fP ()"
+.br
+.ti -1c
+.RI "reverse_iterator \fBrbegin\fP ()"
+.br
+.ti -1c
+.RI "reverse_iterator \fBrend\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBend\fP () const"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBrbegin\fP () const"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBrend\fP () const"
+.br
+.ti -1c
+.RI "void \fBappend\fP (const \fBtString\fP &str)"
+.br
+.ti -1c
+.RI "void \fBassign\fP (const \fBtString\fP &str)"
+.br
+.ti -1c
+.RI "bool \fBcompare\fP (const \fBtString\fP &right) const"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.ti -1c
+.RI "iterator \fBinsert\fP (iterator pos, const tCharType &x)"
+.br
+.ti -1c
+.RI "void \fBinsert\fP (iterator pos, size_t n, const tCharType &x)"
+.br
+.ti -1c
+.RI "template<class InputIterator > void \fBinsert\fP (iterator pos, InputIterator first, InputIterator last)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBerase\fP (size_t pos=0, size_t len=\-1)"
+.br
+.ti -1c
+.RI "iterator \fBerase\fP (const_iterator pos)"
+.br
+.ti -1c
+.RI "iterator \fBerase\fP (const_iterator first, const_iterator last)"
+.br
+.ti -1c
+.RI "size_t \fBlength\fP () const"
+.br
+.ti -1c
+.RI "void \fBpush_back\fP (const tCharType &ch)"
+.br
+.ti -1c
+.RI "void \fBpop_back\fP ()"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator=\fP (const char *right)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator=\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator+=\fP (const char *right)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator+=\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (bool val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (char val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (unsigned char val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (short val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (unsigned short val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (int val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (unsigned int val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (long val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (unsigned long val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (float val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (double val)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (const char *right)"
+.br
+.ti -1c
+.RI "\fBtString\fP & \fBoperator<<\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "bool \fBcompare\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "void \fBpush_back\fP (char ch)"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.RI "Renders to a standard std::string\&. "
+.ti -1c
+.RI "virtual std::string \fBstr\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBNumLines\fP () const"
+.br
+.RI "Reports the current number of lines in this string\&. "
+.ti -1c
+.RI "virtual void \fBRemoveLeadingSpace\fP ()"
+.br
+.RI "Eats the whitespace at the front of the string\&. "
+.ti -1c
+.RI "virtual void \fBRemoveTrailingSpace\fP ()"
+.br
+.RI "Eats the whitespace at the end of the string\&. "
+.ti -1c
+.RI "virtual void \fBToUpper\fP ()"
+.br
+.RI "Capitalizes everything in the string\&. "
+.ti -1c
+.RI "virtual void \fBToLower\fP ()"
+.br
+.RI "Lowercases (is this even a word?) everything the string\&. "
+.ti -1c
+.RI "virtual void \fBCapitalize\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename tDataType > \fBustring\fP & \fBaddToStream\fP (tDataType val)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "tVector \fB_String\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename tCharType>
+.br
+class AnsiGL::String< tCharType >"
+A std::string-esque foundation that allows for potentially elaborate glyphs\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename tCharType> virtual void \fBAnsiGL::String\fP< tCharType >::Capitalize ()\fC [inline]\fP, \fC [virtual]\fP"
+Capitalize the first character of the string (maybe expand to after periods as well? But what about abbreviations?\&.\&.\&.) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

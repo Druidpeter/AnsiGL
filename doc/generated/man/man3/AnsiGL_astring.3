@@ -1,0 +1,164 @@
+.TH "AnsiGL::astring" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::astring \- A perfect std::string implementation for achar\&. (ideally)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <string\&.h>\fP
+.PP
+Inherits \fBAnsiGL::String< achar >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBastring\fP (const \fBustring\fP &str, const tColorCode *colorCodes=NULL)"
+.br
+.ti -1c
+.RI "\fBastring\fP (const std::string &str, const tColorCode *colorCodes=NULL)"
+.br
+.ti -1c
+.RI "void \fBassign\fP (const \fBustring\fP &str, const tColorCode *colorCodes=NULL)"
+.br
+.ti -1c
+.RI "void \fBassign\fP (const std::string &str, const tColorCode *colorCodes=NULL)"
+.br
+.ti -1c
+.RI "bool \fBcompare\fP (const \fBustring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBcompare\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator=\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator+=\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator=\fP (const \fBustring\fP &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator+=\fP (const \fBustring\fP &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator+=\fP (const \fBuchar\fP &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator+=\fP (const \fBachar\fP &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator+=\fP (const \fBastring\fP &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (void *val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (bool val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (char val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (unsigned char val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (short val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (unsigned short val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (int val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (unsigned int val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (long val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (unsigned long val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (float val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (double val)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (const char *right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (const \fBuchar\fP &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (const \fBachar\fP &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (const std::string &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (const \fBustring\fP &right)"
+.br
+.ti -1c
+.RI "\fBastring\fP & \fBoperator<<\fP (const \fBastring\fP &right)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBastring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBastring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBustring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBustring\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const std::string &right) const"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.RI "Renders to a standard std::string\&. "
+.ti -1c
+.RI "virtual std::string \fBstr\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBRender\fP (ENUM_ColorDepth desiredDepth, bool enableAnsi=true, bool enableBell=true) const"
+.br
+.ti -1c
+.RI "virtual \fBastring\fP \fBFormat\fP (unsigned int lineWidth=DEFAULT_LINE_WIDTH, ENUM_TxtAlign align=TxtAlign_Default, const \fBustring\fP wrapAfter=\fBustring\fP('\-'), unsigned int tabSize=8, bool newlineOnly=false) const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddNewline\fP (unsigned int lineWidth=DEFAULT_LINE_WIDTH, ENUM_TxtAlign align=TxtAlign_Default, bool newlineOnly=false)"
+.br
+.ti -1c
+.RI "void \fBadjustAlignment\fP (unsigned int lineWidth=DEFAULT_LINE_WIDTH, ENUM_TxtAlign align=TxtAlign_Default)"
+.br
+.ti -1c
+.RI "template<typename tDataType > \fBastring\fP & \fBaddToStream\fP (tDataType val)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A perfect std::string implementation for achar\&. (ideally) 
+
+astring is an extension of \fBString< achar >\fP\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

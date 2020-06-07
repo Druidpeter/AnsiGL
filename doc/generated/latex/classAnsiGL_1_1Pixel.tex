@@ -1,0 +1,129 @@
+\hypertarget{classAnsiGL_1_1Pixel}{}\doxysection{Ansi\+GL\+::Pixel Class Reference}
+\label{classAnsiGL_1_1Pixel}\index{AnsiGL::Pixel@{AnsiGL::Pixel}}
+
+
+This class makes up the fundamental rendering unit of \mbox{\hyperlink{classAnsiGL_1_1Surface}{Ansi\+G\+L\+::\+Surface}}.  
+
+
+
+
+{\ttfamily \#include $<$pixel.\+h$>$}
+
+Inheritance diagram for Ansi\+GL\+::Pixel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAnsiGL_1_1Pixel}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_a0c46ddb58c434a4287cd923139e98970}\label{classAnsiGL_1_1Pixel_a0c46ddb58c434a4287cd923139e98970}} 
+const \mbox{\hyperlink{classAnsiGL_1_1ANSICodeList}{A\+N\+S\+I\+Code\+List}} \& {\bfseries Attributes} () const
+\item 
+bool \mbox{\hyperlink{classAnsiGL_1_1Pixel_a12cc09b4ef5d0041beeb318945c8a1cd}{Has\+Attribute}} (E\+N\+U\+M\+\_\+\+A\+N\+S\+I\+Codes attrib) const
+\item 
+void \mbox{\hyperlink{classAnsiGL_1_1Pixel_ab5474351f6dfc9e1187719e2a92d5f69}{Add\+Attribute}} (E\+N\+U\+M\+\_\+\+A\+N\+S\+I\+Codes attrib)
+\item 
+void \mbox{\hyperlink{classAnsiGL_1_1Pixel_a050bfb0b3724e5ad15facf67db706d07}{Add\+Attributes}} (\mbox{\hyperlink{classAnsiGL_1_1ANSICodeList}{A\+N\+S\+I\+Code\+List}} attributes)
+\item 
+void \mbox{\hyperlink{classAnsiGL_1_1Pixel_a7c8b784dfa48678a1dd4d3449a73028b}{Remove\+Attribute}} (E\+N\+U\+M\+\_\+\+A\+N\+S\+I\+Codes attrib)
+\item 
+void \mbox{\hyperlink{classAnsiGL_1_1Pixel_acc4eac17d44ca1765c00da3745681dc8}{Clear}} ()
+\item 
+void \mbox{\hyperlink{classAnsiGL_1_1Pixel_a0f2399f665e781322fb0a4994153bdab}{Clear\+Attributes}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_ac55d08c091983ad1e3f9bf370cf22325}\label{classAnsiGL_1_1Pixel_ac55d08c091983ad1e3f9bf370cf22325}} 
+int {\bfseries Palette\+Index}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_a5369ece193f2ba2c1ffb4edfe06f9aa1}\label{classAnsiGL_1_1Pixel_a5369ece193f2ba2c1ffb4edfe06f9aa1}} 
+bool {\bfseries Bell}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_a42313147edbb68287801a2a7e6b39217}\label{classAnsiGL_1_1Pixel_a42313147edbb68287801a2a7e6b39217}} 
+\mbox{\hyperlink{classAnsiGL_1_1ANSICodeList}{A\+N\+S\+I\+Code\+List}} {\bfseries \+\_\+\+Attributes}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_a432070efb8401735ea64bc0e98feebe5}\label{classAnsiGL_1_1Pixel_a432070efb8401735ea64bc0e98feebe5}} 
+class {\bfseries Surface}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class makes up the fundamental rendering unit of \mbox{\hyperlink{classAnsiGL_1_1Surface}{Ansi\+G\+L\+::\+Surface}}. 
+
+A \mbox{\hyperlink{classAnsiGL_1_1Pixel}{Pixel}} is effectively an \mbox{\hyperlink{classAnsiGL_1_1achar}{Ansi\+G\+L\+::achar}} that utilizes a color palette instead of storing the color information directly. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_ab5474351f6dfc9e1187719e2a92d5f69}\label{classAnsiGL_1_1Pixel_ab5474351f6dfc9e1187719e2a92d5f69}} 
+\index{AnsiGL::Pixel@{AnsiGL::Pixel}!AddAttribute@{AddAttribute}}
+\index{AddAttribute@{AddAttribute}!AnsiGL::Pixel@{AnsiGL::Pixel}}
+\doxysubsubsection{\texorpdfstring{AddAttribute()}{AddAttribute()}}
+{\footnotesize\ttfamily void Ansi\+G\+L\+::\+Pixel\+::\+Add\+Attribute (\begin{DoxyParamCaption}\item[{E\+N\+U\+M\+\_\+\+A\+N\+S\+I\+Codes}]{attrib }\end{DoxyParamCaption})}
+
+Adds an ansi code attribute to the pixel, disallowing foreground and background colors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em attrib} & The A\+N\+SI code to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_a050bfb0b3724e5ad15facf67db706d07}\label{classAnsiGL_1_1Pixel_a050bfb0b3724e5ad15facf67db706d07}} 
+\index{AnsiGL::Pixel@{AnsiGL::Pixel}!AddAttributes@{AddAttributes}}
+\index{AddAttributes@{AddAttributes}!AnsiGL::Pixel@{AnsiGL::Pixel}}
+\doxysubsubsection{\texorpdfstring{AddAttributes()}{AddAttributes()}}
+{\footnotesize\ttfamily void Ansi\+G\+L\+::\+Pixel\+::\+Add\+Attributes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAnsiGL_1_1ANSICodeList}{A\+N\+S\+I\+Code\+List}}}]{attributes }\end{DoxyParamCaption})}
+
+Adds a list of A\+N\+SI attributes to the pixel, disallowing foreground and background colors. 
+\begin{DoxyParams}{Parameters}
+{\em attributes} & The list of attributes to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_acc4eac17d44ca1765c00da3745681dc8}\label{classAnsiGL_1_1Pixel_acc4eac17d44ca1765c00da3745681dc8}} 
+\index{AnsiGL::Pixel@{AnsiGL::Pixel}!Clear@{Clear}}
+\index{Clear@{Clear}!AnsiGL::Pixel@{AnsiGL::Pixel}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Ansi\+G\+L\+::\+Pixel\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all attributes from the pixel and reset its state. \mbox{\Hypertarget{classAnsiGL_1_1Pixel_a0f2399f665e781322fb0a4994153bdab}\label{classAnsiGL_1_1Pixel_a0f2399f665e781322fb0a4994153bdab}} 
+\index{AnsiGL::Pixel@{AnsiGL::Pixel}!ClearAttributes@{ClearAttributes}}
+\index{ClearAttributes@{ClearAttributes}!AnsiGL::Pixel@{AnsiGL::Pixel}}
+\doxysubsubsection{\texorpdfstring{ClearAttributes()}{ClearAttributes()}}
+{\footnotesize\ttfamily void Ansi\+G\+L\+::\+Pixel\+::\+Clear\+Attributes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all attributes from the pixel, but does not reset its state. \mbox{\Hypertarget{classAnsiGL_1_1Pixel_a12cc09b4ef5d0041beeb318945c8a1cd}\label{classAnsiGL_1_1Pixel_a12cc09b4ef5d0041beeb318945c8a1cd}} 
+\index{AnsiGL::Pixel@{AnsiGL::Pixel}!HasAttribute@{HasAttribute}}
+\index{HasAttribute@{HasAttribute}!AnsiGL::Pixel@{AnsiGL::Pixel}}
+\doxysubsubsection{\texorpdfstring{HasAttribute()}{HasAttribute()}}
+{\footnotesize\ttfamily bool Ansi\+G\+L\+::\+Pixel\+::\+Has\+Attribute (\begin{DoxyParamCaption}\item[{E\+N\+U\+M\+\_\+\+A\+N\+S\+I\+Codes}]{attrib }\end{DoxyParamCaption}) const}
+
+Checks if the pixel has any A\+N\+SI attributes loaded into it that can be found in the enumerated list of A\+N\+S\+I\+Codes given to it. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em attrib} & The list of A\+N\+SI Codes to check against, as an enumeration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean value. True if the pixel has any matched attributes, false if none. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnsiGL_1_1Pixel_a7c8b784dfa48678a1dd4d3449a73028b}\label{classAnsiGL_1_1Pixel_a7c8b784dfa48678a1dd4d3449a73028b}} 
+\index{AnsiGL::Pixel@{AnsiGL::Pixel}!RemoveAttribute@{RemoveAttribute}}
+\index{RemoveAttribute@{RemoveAttribute}!AnsiGL::Pixel@{AnsiGL::Pixel}}
+\doxysubsubsection{\texorpdfstring{RemoveAttribute()}{RemoveAttribute()}}
+{\footnotesize\ttfamily void Ansi\+G\+L\+::\+Pixel\+::\+Remove\+Attribute (\begin{DoxyParamCaption}\item[{E\+N\+U\+M\+\_\+\+A\+N\+S\+I\+Codes}]{attrib }\end{DoxyParamCaption})}
+
+Removes an A\+N\+SI attribute from the pixel. 
+\begin{DoxyParams}{Parameters}
+{\em attrib} & The A\+N\+SI attribute to remove. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/pixel.\+h\item 
+src/pixel.\+cpp\end{DoxyCompactItemize}

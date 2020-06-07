@@ -1,0 +1,78 @@
+\hypertarget{classAnsiGL_1_1Animation}{}\doxysection{Ansi\+GL\+::Animation Class Reference}
+\label{classAnsiGL_1_1Animation}\index{AnsiGL::Animation@{AnsiGL::Animation}}
+Inheritance diagram for Ansi\+GL\+::Animation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAnsiGL_1_1Animation}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a5d0cfa5a611cb1ee0392a1d82d6eec8e}\label{classAnsiGL_1_1Animation_a5d0cfa5a611cb1ee0392a1d82d6eec8e}} 
+Image\+::\+Ptr {\bfseries Cur\+Frame} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a5d73940ede8ec96112b1d01e1753e0ed}\label{classAnsiGL_1_1Animation_a5d73940ede8ec96112b1d01e1753e0ed}} 
+void {\bfseries Add\+Frame} (Frame\+::\+Ptr frame)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a545fd6d13c00de2d14f0dc5b026593c1}\label{classAnsiGL_1_1Animation_a545fd6d13c00de2d14f0dc5b026593c1}} 
+void {\bfseries Remove\+Frame} (Frame\+::\+Ptr frame)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_ad8da668075a8211ffac33ea14456e7c8}\label{classAnsiGL_1_1Animation_ad8da668075a8211ffac33ea14456e7c8}} 
+void {\bfseries Remove\+Frame} (unsigned int frame\+Num)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a62ef010c31b8ca00819af431e657571d}\label{classAnsiGL_1_1Animation_a62ef010c31b8ca00819af431e657571d}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a59ef1b12f11b161a6a4fcdb3e1a47057}\label{classAnsiGL_1_1Animation_a59ef1b12f11b161a6a4fcdb3e1a47057}} 
+void {\bfseries Restart} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a29fc5d94d46ca92f21fdedbbb5e87f22}\label{classAnsiGL_1_1Animation_a29fc5d94d46ca92f21fdedbbb5e87f22}} 
+void {\bfseries Advance} (unsigned int num\+Frames=1)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_ae80d630a6269ec7512e242619edfe7c0}\label{classAnsiGL_1_1Animation_ae80d630a6269ec7512e242619edfe7c0}} 
+void {\bfseries Rewind} (unsigned int num\+Frames=1)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_afbf2f24dabbfb4d90ade45ee87e1dcaf}\label{classAnsiGL_1_1Animation_afbf2f24dabbfb4d90ade45ee87e1dcaf}} 
+virtual std\+::string {\bfseries str} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a39fa82a8e742920883cdc421363922fe}\label{classAnsiGL_1_1Animation_a39fa82a8e742920883cdc421363922fe}} 
+virtual std\+::string {\bfseries Render} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_ac4b94fddca38f69bc823235428d2199d}\label{classAnsiGL_1_1Animation_ac4b94fddca38f69bc823235428d2199d}} 
+virtual void {\bfseries Render\+To\+Surface} (Surface\+::\+Ptr dest, \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}()) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_acba01840f6e60d7b7a4f94e7bd6c96f4}\label{classAnsiGL_1_1Animation_acba01840f6e60d7b7a4f94e7bd6c96f4}} 
+typedef std\+::list$<$ Frame\+::\+Ptr $>$ {\bfseries t\+Frames}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a3294e2256591ffbdecca048e3779188b}\label{classAnsiGL_1_1Animation_a3294e2256591ffbdecca048e3779188b}} 
+typedef t\+Frames\+::iterator {\bfseries iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_ace21d5e8d6b6e9d18fe2166edaa73ba0}\label{classAnsiGL_1_1Animation_ace21d5e8d6b6e9d18fe2166edaa73ba0}} 
+typedef t\+Frames\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_ae91c1bade342f0a31edbe146f5811bbf}\label{classAnsiGL_1_1Animation_ae91c1bade342f0a31edbe146f5811bbf}} 
+typedef t\+Frames\+::reverse\+\_\+iterator {\bfseries reverse\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_af108f0343aec1885cd39144cfd633531}\label{classAnsiGL_1_1Animation_af108f0343aec1885cd39144cfd633531}} 
+typedef t\+Frames\+::const\+\_\+reverse\+\_\+iterator {\bfseries const\+\_\+reverse\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_ad478af6a2bb92b82e16f3b6ac9f1b1d4}\label{classAnsiGL_1_1Animation_ad478af6a2bb92b82e16f3b6ac9f1b1d4}} 
+std\+::list$<$ Frame\+::\+Ptr $>$ {\bfseries \+\_\+\+Frames}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Animation_a070a7e3a1588cffa6ea3aca63535b147}\label{classAnsiGL_1_1Animation_a070a7e3a1588cffa6ea3aca63535b147}} 
+iterator {\bfseries \+\_\+\+Cur\+Frame}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/animation.\+h\item 
+src/animation.\+cpp\end{DoxyCompactItemize}

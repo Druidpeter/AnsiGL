@@ -1,0 +1,69 @@
+.TH "AnsiGL::InputWindow" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::InputWindow
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::TextWindow\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInputWindow\fP (const \fBastring\fP &windowTitle, const \fBArea2D\fP &windowSize=\fBArea2D\fP(80, 24), unsigned int maxLines=DEFAULT_MAX_LINES, ENUM_TxtAlign alignment=TxtAlign_Default, bool newAtBottom=true, const \fBPoint3D\fP &viewportPos=\fBPoint3D\fP(), bool transparentSpaces=false)"
+.br
+.ti -1c
+.RI "virtual bool \fBEnabled\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBEnabled\fP (bool enabled)"
+.br
+.ti -1c
+.RI "bool \fBCapturingColor\fP () const"
+.br
+.ti -1c
+.RI "void \fBCancelColorCapture\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBSetColorCodes\fP (const tColorCode *colorCodes=NULL)"
+.br
+.ti -1c
+.RI "virtual void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBClearContents\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBClearInput\fP ()"
+.br
+.ti -1c
+.RI "virtual const \fBInputText\fP & \fBCurInput\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBInputChar\fP (const \fBachar\fP &ch)"
+.br
+.ti -1c
+.RI "virtual void \fBInputLine\fP (const \fBastring\fP &line)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB_Enabled\fP"
+.br
+.ti -1c
+.RI "InputText::Ptr \fB_Input\fP"
+.br
+.ti -1c
+.RI "Text::Ptr \fB_Prompt\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

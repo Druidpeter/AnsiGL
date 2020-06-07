@@ -1,0 +1,66 @@
+.TH "AnsiGL::Image" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Image
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Content\fP, and \fBAnsiGL::Surface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBImage\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "virtual const \fBArea2D\fP & \fBSize\fP () const"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBWidth\fP () const"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBHeight\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBWidth\fP (tSizeType width)"
+.br
+.ti -1c
+.RI "virtual void \fBHeight\fP (tSizeType height)"
+.br
+.ti -1c
+.RI "void \fBResize\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "void \fBFlipX\fP ()"
+.br
+.ti -1c
+.RI "void \fBFlipY\fP ()"
+.br
+.ti -1c
+.RI "void \fBRotate\fP (int rotation)"
+.br
+.ti -1c
+.RI "virtual std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBRenderToSurface\fP (Surface::Ptr dest, const \fBPoint2D\fP &pos=\fBPoint2D\fP()) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBTransparentSpaces\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

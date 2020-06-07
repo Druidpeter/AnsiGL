@@ -1,0 +1,113 @@
+.TH "AnsiGL::TextWindow" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::TextWindow
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Window\fP\&.
+.PP
+Inherited by \fBAnsiGL::InputWindow\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTextWindow\fP (const \fBastring\fP &windowTitle, const \fBArea2D\fP &windowSize=\fBArea2D\fP(80, 24), unsigned int maxLines=DEFAULT_MAX_LINES, ENUM_TxtAlign alignment=TxtAlign_Default, bool newAtBottom=true, const \fBPoint3D\fP &viewportPos=\fBPoint3D\fP(), bool transparentSpaces=false)"
+.br
+.ti -1c
+.RI "virtual void \fBWidth\fP (tSizeType width)"
+.br
+.ti -1c
+.RI "virtual void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "unsigned int \fBMaxLines\fP () const"
+.br
+.ti -1c
+.RI "void \fBMaxLines\fP (unsigned int numLines)"
+.br
+.ti -1c
+.RI "bool \fBWordWrap\fP () const"
+.br
+.ti -1c
+.RI "void \fBWordWrap\fP (bool wrap)"
+.br
+.ti -1c
+.RI "ENUM_TxtAlign \fBAlign\fP () const"
+.br
+.ti -1c
+.RI "void \fBAlign\fP (ENUM_TxtAlign align)"
+.br
+.ti -1c
+.RI "virtual void \fBAddLine\fP (const \fBastring\fP &line)"
+.br
+.ti -1c
+.RI "virtual void \fBAddLineAtTop\fP (const \fBastring\fP &line)"
+.br
+.ti -1c
+.RI "virtual void \fBAddLineAtBottom\fP (const \fBastring\fP &line)"
+.br
+.ti -1c
+.RI "virtual void \fBInsertLine\fP (const \fBastring\fP &line, unsigned int atLineNum=0)"
+.br
+.ti -1c
+.RI "virtual void \fBInsertLineFromTop\fP (const \fBastring\fP &line, unsigned int atLineNum=0)"
+.br
+.ti -1c
+.RI "virtual void \fBInsertLineFromBottom\fP (const \fBastring\fP &line, unsigned int atLineNum=0)"
+.br
+.ti -1c
+.RI "virtual void \fBRemoveLine\fP (unsigned int numLines=1)"
+.br
+.ti -1c
+.RI "virtual void \fBRemoveLineFromTop\fP (unsigned int numLines=1, unsigned int atLineNum=0)"
+.br
+.ti -1c
+.RI "virtual void \fBRemoveLineFromBottom\fP (unsigned int numLines=1, unsigned int atLineNum=0)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBScrollToNew\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBresetLineSpacing\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBscrollToLine\fP (Text::Ptr line)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::list< Text::Ptr > \fB_Text\fP"
+.br
+.ti -1c
+.RI "unsigned int \fB_MaxLines\fP"
+.br
+.ti -1c
+.RI "ENUM_TxtAlign \fB_Alignment\fP"
+.br
+.ti -1c
+.RI "ENUM_ColorDepth \fB_ColorDepth\fP"
+.br
+.ti -1c
+.RI "bool \fB_WordWrap\fP"
+.br
+.ti -1c
+.RI "bool \fB_NewAtBottom\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

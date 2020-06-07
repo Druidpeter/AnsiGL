@@ -1,0 +1,82 @@
+.TH "AnsiGL::Animation" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Animation
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Content\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Image::Ptr \fBCurFrame\fP () const"
+.br
+.ti -1c
+.RI "void \fBAddFrame\fP (Frame::Ptr frame)"
+.br
+.ti -1c
+.RI "void \fBRemoveFrame\fP (Frame::Ptr frame)"
+.br
+.ti -1c
+.RI "void \fBRemoveFrame\fP (unsigned int frameNum)"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "void \fBRestart\fP ()"
+.br
+.ti -1c
+.RI "void \fBAdvance\fP (unsigned int numFrames=1)"
+.br
+.ti -1c
+.RI "void \fBRewind\fP (unsigned int numFrames=1)"
+.br
+.ti -1c
+.RI "virtual std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBRenderToSurface\fP (Surface::Ptr dest, \fBPoint2D\fP pos=\fBPoint2D\fP()) const"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::list< Frame::Ptr > \fBtFrames\fP"
+.br
+.ti -1c
+.RI "typedef tFrames::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef tFrames::const_iterator \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef tFrames::reverse_iterator \fBreverse_iterator\fP"
+.br
+.ti -1c
+.RI "typedef tFrames::const_reverse_iterator \fBconst_reverse_iterator\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::list< Frame::Ptr > \fB_Frames\fP"
+.br
+.ti -1c
+.RI "iterator \fB_CurFrame\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

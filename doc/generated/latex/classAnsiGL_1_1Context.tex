@@ -1,0 +1,132 @@
+\hypertarget{classAnsiGL_1_1Context}{}\doxysection{Ansi\+GL\+::Context Class Reference}
+\label{classAnsiGL_1_1Context}\index{AnsiGL::Context@{AnsiGL::Context}}
+Inheritance diagram for Ansi\+GL\+::Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classAnsiGL_1_1Context}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_ad6f1f4c90c6854c1e41281f626e1aea5}\label{classAnsiGL_1_1Context_ad6f1f4c90c6854c1e41281f626e1aea5}} 
+typedef t\+Content\+List\+::iterator {\bfseries depth\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a58156ca6f2f366ee28e8fd3615bb00b2}\label{classAnsiGL_1_1Context_a58156ca6f2f366ee28e8fd3615bb00b2}} 
+typedef t\+Content\+List\+::const\+\_\+iterator {\bfseries const\+\_\+depth\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a3fd529adbc1498ec021143f5476af10f}\label{classAnsiGL_1_1Context_a3fd529adbc1498ec021143f5476af10f}} 
+typedef t\+Content\+List\+::reverse\+\_\+iterator {\bfseries reverse\+\_\+depth\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a99cb9cd919dcc0738c01032e0a7d2cb2}\label{classAnsiGL_1_1Context_a99cb9cd919dcc0738c01032e0a7d2cb2}} 
+typedef t\+Content\+List\+::const\+\_\+reverse\+\_\+iterator {\bfseries const\+\_\+reverse\+\_\+depth\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a06c274273e7abaa9b48f4de90425848f}\label{classAnsiGL_1_1Context_a06c274273e7abaa9b48f4de90425848f}} 
+typedef Content\+Marker\+::\+List\+::iterator {\bfseries content\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a8b25c0aa870846722be38d8ffa3a24f5}\label{classAnsiGL_1_1Context_a8b25c0aa870846722be38d8ffa3a24f5}} 
+typedef Content\+Marker\+::\+List\+::const\+\_\+iterator {\bfseries const\+\_\+content\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_ac56d54473f28271a7493d157d003489c}\label{classAnsiGL_1_1Context_ac56d54473f28271a7493d157d003489c}} 
+typedef Content\+Marker\+::\+List\+::reverse\+\_\+iterator {\bfseries reverse\+\_\+content\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_acb9ce75a6f310779bf87a3ee06564b25}\label{classAnsiGL_1_1Context_acb9ce75a6f310779bf87a3ee06564b25}} 
+typedef Content\+Marker\+::\+List\+::const\+\_\+reverse\+\_\+iterator {\bfseries const\+\_\+reverse\+\_\+content\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a257c3a1046c0ee08985a9e8af55f6a94}\label{classAnsiGL_1_1Context_a257c3a1046c0ee08985a9e8af55f6a94}} 
+{\bfseries Context} (const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&viewport\+Size, const \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} \&viewport\+Pos=\mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}}())
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_ab8a0ad304a33cbb59a57e8c618815fd7}\label{classAnsiGL_1_1Context_ab8a0ad304a33cbb59a57e8c618815fd7}} 
+virtual void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a33a5fc1cf50f3749c9fdfdcd882e3a19}\label{classAnsiGL_1_1Context_a33a5fc1cf50f3749c9fdfdcd882e3a19}} 
+virtual const \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} \& {\bfseries Cur\+Viewport\+Pos} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_ab941d99f4e5113046f216693567463ef}\label{classAnsiGL_1_1Context_ab941d99f4e5113046f216693567463ef}} 
+virtual void {\bfseries Move\+Viewport\+To} (const \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} \&pos)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_ab8e7500db7cb5ffd8a36052c7fa18836}\label{classAnsiGL_1_1Context_ab8e7500db7cb5ffd8a36052c7fa18836}} 
+virtual void {\bfseries Move\+Viewport\+To} (const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_abae7aecc6761f56fd841f3bbf0552ffa}\label{classAnsiGL_1_1Context_abae7aecc6761f56fd841f3bbf0552ffa}} 
+virtual void {\bfseries Resize\+Viewport} (const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&size)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a7b3e78385b6529a38d9df4b8f9e9c8d8}\label{classAnsiGL_1_1Context_a7b3e78385b6529a38d9df4b8f9e9c8d8}} 
+virtual void {\bfseries Add\+Content} (Content\+::\+Ptr content, const \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}}())
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a3339da7289a8a7cc67d8954cc19cbea5}\label{classAnsiGL_1_1Context_a3339da7289a8a7cc67d8954cc19cbea5}} 
+virtual void {\bfseries Remove\+Content} (Content\+::\+Ptr content)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a4c2ec13f31fe02608ba1c608732cf698}\label{classAnsiGL_1_1Context_a4c2ec13f31fe02608ba1c608732cf698}} 
+virtual void {\bfseries Remove\+Content\+From} (t\+Point\+Type depth, Content\+::\+Ptr content)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_af18476259cbe9ec0778c0a4ffeab0177}\label{classAnsiGL_1_1Context_af18476259cbe9ec0778c0a4ffeab0177}} 
+virtual const \mbox{\hyperlink{classAnsiGL_1_1FixedArea3D}{Fixed\+Area3D}} \& {\bfseries Total\+Content\+Size} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a6c42e4c6c3ff6a8edee92a9259612b0a}\label{classAnsiGL_1_1Context_a6c42e4c6c3ff6a8edee92a9259612b0a}} 
+virtual void {\bfseries Recalculate\+Total\+Content\+Size} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a4d06b77c7d3affa2c0a63e38e385fb98}\label{classAnsiGL_1_1Context_a4d06b77c7d3affa2c0a63e38e385fb98}} 
+virtual bool {\bfseries Contains} (Content\+::\+Ptr content) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a6815e223a861526e3c6ef746996f7a61}\label{classAnsiGL_1_1Context_a6815e223a861526e3c6ef746996f7a61}} 
+virtual std\+::string {\bfseries str} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_ae3dce78afa63cf197733b2b8e36eae0a}\label{classAnsiGL_1_1Context_ae3dce78afa63cf197733b2b8e36eae0a}} 
+virtual std\+::string {\bfseries Render} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_ae6315131dbf34ebebbb499d781b785e0}\label{classAnsiGL_1_1Context_ae6315131dbf34ebebbb499d781b785e0}} 
+virtual void {\bfseries Render\+To\+Surface} (Surface\+::\+Ptr dest, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point}}()) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a4d7775366463d3359e083d40d1722210}\label{classAnsiGL_1_1Context_a4d7775366463d3359e083d40d1722210}} 
+typedef std\+::map$<$ t\+Point\+Type, Content\+Marker\+::\+List $>$ {\bfseries t\+Content\+List}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a4a5133b0be6a3f3494c1f6c5103056d8}\label{classAnsiGL_1_1Context_a4a5133b0be6a3f3494c1f6c5103056d8}} 
+void {\bfseries reset\+Total\+Content\+Size} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a07333649cce687f83c537afde390efe9}\label{classAnsiGL_1_1Context_a07333649cce687f83c537afde390efe9}} 
+void {\bfseries expand\+Total\+Content\+Size} (Content\+Marker\+::\+Ptr content)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a65748061366e6b686a3e8090eb258820}\label{classAnsiGL_1_1Context_a65748061366e6b686a3e8090eb258820}} 
+t\+Size\+Type {\bfseries capped\+Add} (t\+Size\+Type first, t\+Size\+Type second)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a247fab5025b3e35db79f16c568b0a463}\label{classAnsiGL_1_1Context_a247fab5025b3e35db79f16c568b0a463}} 
+t\+Size\+Type {\bfseries capped\+Sub} (t\+Size\+Type first, t\+Size\+Type second)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_af3984189e52850dbc7d7e0846c55f816}\label{classAnsiGL_1_1Context_af3984189e52850dbc7d7e0846c55f816}} 
+t\+Content\+List {\bfseries \+\_\+\+Contents}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a6b4314bc9f558e4800be2c6769e19240}\label{classAnsiGL_1_1Context_a6b4314bc9f558e4800be2c6769e19240}} 
+\mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} {\bfseries \+\_\+\+Viewport\+Pos}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_aa1e19b21ad7401552f87dd80a2839dfe}\label{classAnsiGL_1_1Context_aa1e19b21ad7401552f87dd80a2839dfe}} 
+\mbox{\hyperlink{classAnsiGL_1_1FixedArea3D}{Fixed\+Area3D}} {\bfseries \+\_\+\+Total\+Content\+Size}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_a4dbe95b7f0c45d6e4d38e7f3a819b539}\label{classAnsiGL_1_1Context_a4dbe95b7f0c45d6e4d38e7f3a819b539}} 
+bool {\bfseries \+\_\+\+Needs\+Size\+Recalc}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Context_aed12588f3fc736d8c9d5024ed9f8375f}\label{classAnsiGL_1_1Context_aed12588f3fc736d8c9d5024ed9f8375f}} 
+class {\bfseries Content}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/context.\+h\item 
+src/context.\+cpp\end{DoxyCompactItemize}

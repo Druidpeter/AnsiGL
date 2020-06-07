@@ -15,38 +15,45 @@
 
 namespace AnsiGL
 {
-	class Pixel : public uchar
-	{
-	public:
-		int				PaletteIndex;
-		bool			Bell;
 
-	public:
-		Pixel():
-			PaletteIndex(-1),
-			Bell(false)
-		{
-		}
+    //! @class Pixel
+    //! @brief This class makes up the fundamental rendering unit of AnsiGL::Surface.
+    //!
+    //!  A Pixel is effectively an AnsiGL::achar that utilizes a color
+    //!  palette instead of storing the color information directly.
+    
+    class Pixel : public uchar
+    {
+    public:
+        int				PaletteIndex;
+        bool			Bell;
 
-		const ANSICodeList &Attributes() const
-		{
-			return _Attributes;
-		}
+    public:
+        Pixel():
+            PaletteIndex(-1),
+            Bell(false)
+        {
+        }
 
-		bool HasAttribute( ENUM_ANSICodes attrib ) const;
+        const ANSICodeList &Attributes() const
+        {
+            return _Attributes;
+        }
 
-		void AddAttribute( ENUM_ANSICodes attrib );
-		void AddAttributes( ANSICodeList attributes );
-		void RemoveAttribute( ENUM_ANSICodes attrib );
+        bool HasAttribute( ENUM_ANSICodes attrib ) const;
 
-		void Clear();
-		void ClearAttributes();
+        void AddAttribute( ENUM_ANSICodes attrib );
+        void AddAttributes( ANSICodeList attributes );
+        void RemoveAttribute( ENUM_ANSICodes attrib );
 
-	protected:
-		ANSICodeList	_Attributes;		// Except color!
+        void Clear();
+        void ClearAttributes();
 
-		friend class Surface;				// For fast access
-	};
+    protected:
+        ANSICodeList	_Attributes;		// Except color!
+
+        friend class Surface;				// For fast access
+    };
 }
 
 #endif // __ANSIGL_PIXEL_H__

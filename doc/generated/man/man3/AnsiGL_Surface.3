@@ -1,0 +1,215 @@
+.TH "AnsiGL::Surface" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Surface
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <surface\&.h>\fP
+.PP
+Inherited by \fBAnsiGL::Image\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSurface\fP ()"
+.br
+.ti -1c
+.RI "\fBSurface\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "virtual \fB~Surface\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "Scanline \fBGetScanline\fP (int lineNum) const"
+.br
+.ti -1c
+.RI "const \fBachar\fP & \fBGetPixel\fP (const \fBPoint2D\fP &pixel) const"
+.br
+.ti -1c
+.RI "virtual const \fBArea2D\fP & \fBSize\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBResize\fP (\fBArea2D\fP size)"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBWidth\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBWidth\fP (tSizeType width)"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBHeight\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBHeight\fP (tSizeType height)"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "bool \fBHasPoint\fP (const \fBPoint2D\fP &pos) const"
+.br
+.ti -1c
+.RI "void \fBAddToPalette\fP (ColorPalette::Ptr palette)"
+.br
+.ti -1c
+.RI "int \fBFindColorIndex\fP (const \fBColorDef\fP &color)"
+.br
+.ti -1c
+.RI "ColorDef::Ptr \fBFindColorFromIndex\fP (int index) const"
+.br
+.ti -1c
+.RI "virtual std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBRenderToSurface\fP (Surface::Ptr dest, const \fBPoint2D\fP &point=\fBPoint2D\fP(), bool transparentSpaces=TRANSPARENT_DEFAULT) const"
+.br
+.ti -1c
+.RI "virtual void \fBRenderAreaToSurface\fP (\fBFixedArea2D\fP visibleArea, Surface::Ptr dest, const \fBPoint2D\fP &point=\fBPoint2D\fP(), bool transparentSpaces=TRANSPARENT_DEFAULT) const"
+.br
+.ti -1c
+.RI "virtual void \fBDrawChar\fP (const \fBachar\fP &ach, const \fBPoint2D\fP &point=\fBPoint2D\fP(), bool transparentSpaces=TRANSPARENT_DEFAULT)"
+.br
+.ti -1c
+.RI "virtual void \fBDrawChar\fP (const std::string &ch, const \fBPoint2D\fP &point=\fBPoint2D\fP(), bool transparentSpaces=TRANSPARENT_DEFAULT)"
+.br
+.ti -1c
+.RI "virtual void \fBDrawString\fP (const \fBastring\fP &str, const \fBPoint2D\fP &pos=\fBPoint2D\fP(), bool transparentSpaces=TRANSPARENT_DEFAULT, bool invertString=false, bool rightToLeft=false, bool invertNewlineDir=false)"
+.br
+.ti -1c
+.RI "virtual void \fBDrawString\fP (const std::string &str, const \fBPoint2D\fP &pos=\fBPoint2D\fP(), bool transparentSpaces=TRANSPARENT_DEFAULT, bool invertString=false, bool rightToLeft=false, bool invertNewlineDir=false)"
+.br
+.ti -1c
+.RI "virtual void \fBDrawVString\fP (const \fBastring\fP &str, const \fBPoint2D\fP &pos=\fBPoint2D\fP(), bool transparentSpaces=TRANSPARENT_DEFAULT, bool invertString=false, bool bottomToTop=false, bool invertNewlineDir=false)"
+.br
+.ti -1c
+.RI "virtual void \fBDrawVString\fP (const std::string &str, const \fBPoint2D\fP &po=\fBPoint2D\fP(), bool transparentSpaces=TRANSPARENT_DEFAULT, bool invertString=false, bool bottomToTop=false, bool invertNewlineDir=false)"
+.br
+.ti -1c
+.RI "virtual void \fBFillGlyph\fP (const \fBArea2D\fP &size, const \fBuchar\fP &glyph=\fBuchar\fP(), const \fBPoint2D\fP &pos=\fBPoint2D\fP())"
+.br
+.ti -1c
+.RI "virtual void \fBFillColor\fP (const \fBArea2D\fP &size, const \fBColorDef\fP &color=\fBColorDef\fP(), const \fBPoint2D\fP &pos=\fBPoint2D\fP())"
+.br
+.ti -1c
+.RI "virtual void \fBFillChar\fP (const \fBArea2D\fP &size, const \fBachar\fP &ach=\fBachar\fP(), const \fBPoint2D\fP &pos=\fBPoint2D\fP())"
+.br
+.ti -1c
+.RI "virtual void \fBDrawBox\fP (const \fBArea2D\fP &box, const \fBPoint2D\fP &pos=\fBPoint2D\fP(), const \fBachar\fP &hBorder=\fBachar\fP('\-'), const \fBachar\fP &vBorder=\fBachar\fP('|'), const \fBachar\fP &fillCh=\fBachar\fP(' '), bool transparentSpaces=TRANSPARENT_DEFAULT)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "ColorPalette::Ptr \fBPalette\fP"
+.br
+.ti -1c
+.RI "bool \fBAutoPalette\fP"
+.br
+.ti -1c
+.RI "ENUM_ColorDepth \fBDesiredDepth\fP"
+.br
+.ti -1c
+.RI "int \fBTabSize\fP"
+.br
+.ti -1c
+.RI "bool \fBRenderANSI\fP"
+.br
+.ti -1c
+.RI "bool \fBRenderBell\fP"
+.br
+.ti -1c
+.RI "bool \fBUseCLS\fP"
+.br
+.ti -1c
+.RI "bool \fBUseENDL\fP"
+.br
+.ti -1c
+.RI "bool \fBUseLF\fP"
+.br
+.ti -1c
+.RI "bool \fBUseCR\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBpixelHasAnsi\fP (const \fBPoint2D\fP &pixel) const"
+.br
+.ti -1c
+.RI "std::string \fBpixelRenderAnsi\fP (const \fBPoint2D\fP &pixel) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< Scanline > \fB_Pixels\fP"
+.br
+.ti -1c
+.RI "\fBArea2D\fP \fB_Size\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A \fBSurface\fP is a collection of pixels, arranged logically in a rectangular format akin to any conventional rendering context for any other graphics library\&. The pixel resolution of AnsiGL is (as expected, I'm sure) a single term character\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AnsiGL::Surface::Surface ()\fC [inline]\fP"
+Construct and initialize a \fBSurface\fP object with default values\&. 
+.SS "AnsiGL::Surface::Surface (const \fBArea2D\fP & size)\fC [inline]\fP"
+Construct and initialize a \fBSurface\fP object with an \fBArea2D\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "const \fBachar\fP & AnsiGL::Surface::GetPixel (const \fBPoint2D\fP & pixel) const"
+Get a pixel from within a surface\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fBPoint2D\fP\fP The position within the surface from which to retrieve the pixel\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An achar object\&. 
+.RE
+.PP
+
+.SS "Scanline AnsiGL::Surface::GetScanline (int lineNum) const"
+Get a line of information from a surface\&. This is a little safer than direct access to our vector, and is preferred unless direct access is absolutely necessary, usually only for low-level rendering functions\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlineNum\fP the vertical position of the surface from which to retrieve the scanline\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A Scanline object\&. 
+.RE
+.PP
+
+.SS "void AnsiGL::Surface::Resize (\fBArea2D\fP size)\fC [virtual]\fP"
+Resize the physical dimensions of the surface object to the dimensions of the given \fBArea2D\fP object\&. 
+.SS "const \fBArea\fP & AnsiGL::Surface::Size () const\fC [virtual]\fP"
+Get the physical dimensions of the surface object as an \fBArea2D\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+An \fBArea2D\fP object\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

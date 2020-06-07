@@ -1,0 +1,59 @@
+.TH "AnsiGL::ANSICodeList" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::ANSICodeList
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBANSICodeList\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBANSICodeList\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBAdd\fP (ENUM_ANSICodes code)"
+.br
+.ti -1c
+.RI "void \fBAdd\fP (const \fBANSICodeList\fP &codes)"
+.br
+.ti -1c
+.RI "bool \fBHas\fP (ENUM_ANSICodes code) const"
+.br
+.ti -1c
+.RI "bool \fBHasAll\fP (const \fBANSICodeList\fP &codes) const"
+.br
+.ti -1c
+.RI "void \fBRemove\fP (ENUM_ANSICodes code)"
+.br
+.ti -1c
+.RI "void \fBRemove\fP (const \fBANSICodeList\fP &codes)"
+.br
+.ti -1c
+.RI "std::string \fBRender\fP (ENUM_ColorDepth desiredDepth=ColorDepth_Default, bool background=false) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_CodesL\fP"
+.br
+.ti -1c
+.RI "int \fB_CodesH\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

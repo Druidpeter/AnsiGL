@@ -1,0 +1,107 @@
+\hypertarget{classAnsiGL_1_1TextWindow}{}\doxysection{Ansi\+GL\+::Text\+Window Class Reference}
+\label{classAnsiGL_1_1TextWindow}\index{AnsiGL::TextWindow@{AnsiGL::TextWindow}}
+Inheritance diagram for Ansi\+GL\+::Text\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classAnsiGL_1_1TextWindow}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a7e237ea591c3030d042f0a66517b266a}\label{classAnsiGL_1_1TextWindow_a7e237ea591c3030d042f0a66517b266a}} 
+{\bfseries Text\+Window} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&window\+Title, const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&window\+Size=\mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}}(80, 24), unsigned int max\+Lines=D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+L\+I\+N\+ES, E\+N\+U\+M\+\_\+\+Txt\+Align alignment=Txt\+Align\+\_\+\+Default, bool new\+At\+Bottom=true, const \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} \&viewport\+Pos=\mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}}(), bool transparent\+Spaces=false)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a0f2768e3d1f7957b93c0d86c3441ad44}\label{classAnsiGL_1_1TextWindow_a0f2768e3d1f7957b93c0d86c3441ad44}} 
+virtual void {\bfseries Width} (t\+Size\+Type width)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a65f26cc55dfa2cc6339b8cd8a18b67ce}\label{classAnsiGL_1_1TextWindow_a65f26cc55dfa2cc6339b8cd8a18b67ce}} 
+virtual void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_ad7841dfafeffa4afb68fa6761360f65e}\label{classAnsiGL_1_1TextWindow_ad7841dfafeffa4afb68fa6761360f65e}} 
+unsigned int {\bfseries Max\+Lines} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_ab498b19fdef1b9bc9aa4ce1c9656885b}\label{classAnsiGL_1_1TextWindow_ab498b19fdef1b9bc9aa4ce1c9656885b}} 
+void {\bfseries Max\+Lines} (unsigned int num\+Lines)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_adee8f18ef716cc81d0bd9694d37c6ca4}\label{classAnsiGL_1_1TextWindow_adee8f18ef716cc81d0bd9694d37c6ca4}} 
+bool {\bfseries Word\+Wrap} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_adcf7509ae1415c9b5076cf7f9ce48274}\label{classAnsiGL_1_1TextWindow_adcf7509ae1415c9b5076cf7f9ce48274}} 
+void {\bfseries Word\+Wrap} (bool wrap)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a1d4184f5dde554f0d6d5568ede164d0b}\label{classAnsiGL_1_1TextWindow_a1d4184f5dde554f0d6d5568ede164d0b}} 
+E\+N\+U\+M\+\_\+\+Txt\+Align {\bfseries Align} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a484aa0cb027ed7dd822137a2237f2ad5}\label{classAnsiGL_1_1TextWindow_a484aa0cb027ed7dd822137a2237f2ad5}} 
+void {\bfseries Align} (E\+N\+U\+M\+\_\+\+Txt\+Align align)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a74a125c6a1f0788fd8a48952292f7bae}\label{classAnsiGL_1_1TextWindow_a74a125c6a1f0788fd8a48952292f7bae}} 
+virtual void {\bfseries Add\+Line} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&line)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a53f0a47dc510fc8d6075e4f50b1ffe51}\label{classAnsiGL_1_1TextWindow_a53f0a47dc510fc8d6075e4f50b1ffe51}} 
+virtual void {\bfseries Add\+Line\+At\+Top} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&line)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a00e3548c5ff56ceb1a9aa40b4aff59fd}\label{classAnsiGL_1_1TextWindow_a00e3548c5ff56ceb1a9aa40b4aff59fd}} 
+virtual void {\bfseries Add\+Line\+At\+Bottom} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&line)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_af823b813c31b755dca02f84f95f57e15}\label{classAnsiGL_1_1TextWindow_af823b813c31b755dca02f84f95f57e15}} 
+virtual void {\bfseries Insert\+Line} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&line, unsigned int at\+Line\+Num=0)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a427bf33d2ab6855edfb2f80dc101bcd0}\label{classAnsiGL_1_1TextWindow_a427bf33d2ab6855edfb2f80dc101bcd0}} 
+virtual void {\bfseries Insert\+Line\+From\+Top} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&line, unsigned int at\+Line\+Num=0)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a9e573d099318a9abd3a8f07e42333249}\label{classAnsiGL_1_1TextWindow_a9e573d099318a9abd3a8f07e42333249}} 
+virtual void {\bfseries Insert\+Line\+From\+Bottom} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&line, unsigned int at\+Line\+Num=0)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a7d544f726eda664bd4829b984e486829}\label{classAnsiGL_1_1TextWindow_a7d544f726eda664bd4829b984e486829}} 
+virtual void {\bfseries Remove\+Line} (unsigned int num\+Lines=1)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_ad970e308c27d4026a898f8f2c3de0fa4}\label{classAnsiGL_1_1TextWindow_ad970e308c27d4026a898f8f2c3de0fa4}} 
+virtual void {\bfseries Remove\+Line\+From\+Top} (unsigned int num\+Lines=1, unsigned int at\+Line\+Num=0)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a02b92314f2e045050b8cd41ca8b7b8b2}\label{classAnsiGL_1_1TextWindow_a02b92314f2e045050b8cd41ca8b7b8b2}} 
+virtual void {\bfseries Remove\+Line\+From\+Bottom} (unsigned int num\+Lines=1, unsigned int at\+Line\+Num=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a0a38cfb5cd17d5d360df7c0ace4e5059}\label{classAnsiGL_1_1TextWindow_a0a38cfb5cd17d5d360df7c0ace4e5059}} 
+bool {\bfseries Scroll\+To\+New}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a61680ef1557f8589b924f069526822d2}\label{classAnsiGL_1_1TextWindow_a61680ef1557f8589b924f069526822d2}} 
+virtual void {\bfseries reset\+Line\+Spacing} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a801f3621dbb6f4a5a9870cfe566c8a2e}\label{classAnsiGL_1_1TextWindow_a801f3621dbb6f4a5a9870cfe566c8a2e}} 
+virtual void {\bfseries scroll\+To\+Line} (Text\+::\+Ptr line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a338326e3e42e3be6389ed497bf4e7ebd}\label{classAnsiGL_1_1TextWindow_a338326e3e42e3be6389ed497bf4e7ebd}} 
+std\+::list$<$ Text\+::\+Ptr $>$ {\bfseries \+\_\+\+Text}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a2bd925df272dadd8943f7c9c2b7ab169}\label{classAnsiGL_1_1TextWindow_a2bd925df272dadd8943f7c9c2b7ab169}} 
+unsigned int {\bfseries \+\_\+\+Max\+Lines}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a7b8fb20f83584ffc0d4927f2123b0c5e}\label{classAnsiGL_1_1TextWindow_a7b8fb20f83584ffc0d4927f2123b0c5e}} 
+E\+N\+U\+M\+\_\+\+Txt\+Align {\bfseries \+\_\+\+Alignment}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a3f2125436fc7a5f0896cf4e340b4f272}\label{classAnsiGL_1_1TextWindow_a3f2125436fc7a5f0896cf4e340b4f272}} 
+E\+N\+U\+M\+\_\+\+Color\+Depth {\bfseries \+\_\+\+Color\+Depth}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a1acde606e9e3ecbe6d48f82d7eb08082}\label{classAnsiGL_1_1TextWindow_a1acde606e9e3ecbe6d48f82d7eb08082}} 
+bool {\bfseries \+\_\+\+Word\+Wrap}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1TextWindow_a66934e84d10c3ae5c98cc36fce8b22f2}\label{classAnsiGL_1_1TextWindow_a66934e84d10c3ae5c98cc36fce8b22f2}} 
+bool {\bfseries \+\_\+\+New\+At\+Bottom}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/textwindow.\+h\item 
+src/textwindow.\+cpp\end{DoxyCompactItemize}

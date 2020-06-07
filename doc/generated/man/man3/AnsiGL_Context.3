@@ -1,0 +1,141 @@
+.TH "AnsiGL::Context" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Context
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Content\fP\&.
+.PP
+Inherited by \fBAnsiGL::Screen\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef tContentList::iterator \fBdepth_iterator\fP"
+.br
+.ti -1c
+.RI "typedef tContentList::const_iterator \fBconst_depth_iterator\fP"
+.br
+.ti -1c
+.RI "typedef tContentList::reverse_iterator \fBreverse_depth_iterator\fP"
+.br
+.ti -1c
+.RI "typedef tContentList::const_reverse_iterator \fBconst_reverse_depth_iterator\fP"
+.br
+.ti -1c
+.RI "typedef ContentMarker::List::iterator \fBcontent_iterator\fP"
+.br
+.ti -1c
+.RI "typedef ContentMarker::List::const_iterator \fBconst_content_iterator\fP"
+.br
+.ti -1c
+.RI "typedef ContentMarker::List::reverse_iterator \fBreverse_content_iterator\fP"
+.br
+.ti -1c
+.RI "typedef ContentMarker::List::const_reverse_iterator \fBconst_reverse_content_iterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBContext\fP (const \fBArea2D\fP &viewportSize, const \fBPoint3D\fP &viewportPos=\fBPoint3D\fP())"
+.br
+.ti -1c
+.RI "virtual void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "virtual const \fBPoint3D\fP & \fBCurViewportPos\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBMoveViewportTo\fP (const \fBPoint3D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual void \fBMoveViewportTo\fP (const \fBPoint2D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual void \fBResizeViewport\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "virtual void \fBAddContent\fP (Content::Ptr content, const \fBPoint3D\fP &pos=\fBPoint3D\fP())"
+.br
+.ti -1c
+.RI "virtual void \fBRemoveContent\fP (Content::Ptr content)"
+.br
+.ti -1c
+.RI "virtual void \fBRemoveContentFrom\fP (tPointType depth, Content::Ptr content)"
+.br
+.ti -1c
+.RI "virtual const \fBFixedArea3D\fP & \fBTotalContentSize\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBRecalculateTotalContentSize\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBContains\fP (Content::Ptr content) const"
+.br
+.ti -1c
+.RI "virtual std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBRenderToSurface\fP (Surface::Ptr dest, const \fBPoint2D\fP &pos=\fBPoint\fP()) const"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< tPointType, ContentMarker::List > \fBtContentList\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBresetTotalContentSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBexpandTotalContentSize\fP (ContentMarker::Ptr content)"
+.br
+.ti -1c
+.RI "tSizeType \fBcappedAdd\fP (tSizeType first, tSizeType second)"
+.br
+.ti -1c
+.RI "tSizeType \fBcappedSub\fP (tSizeType first, tSizeType second)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "tContentList \fB_Contents\fP"
+.br
+.ti -1c
+.RI "\fBPoint3D\fP \fB_ViewportPos\fP"
+.br
+.ti -1c
+.RI "\fBFixedArea3D\fP \fB_TotalContentSize\fP"
+.br
+.ti -1c
+.RI "bool \fB_NeedsSizeRecalc\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBContent\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

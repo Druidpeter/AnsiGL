@@ -1,0 +1,66 @@
+\hypertarget{classAnsiGL_1_1InputWindow}{}\doxysection{Ansi\+GL\+::Input\+Window Class Reference}
+\label{classAnsiGL_1_1InputWindow}\index{AnsiGL::InputWindow@{AnsiGL::InputWindow}}
+Inheritance diagram for Ansi\+GL\+::Input\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classAnsiGL_1_1InputWindow}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_ad4d54629db1ba6518b07ae488c0311bb}\label{classAnsiGL_1_1InputWindow_ad4d54629db1ba6518b07ae488c0311bb}} 
+{\bfseries Input\+Window} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&window\+Title, const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&window\+Size=\mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}}(80, 24), unsigned int max\+Lines=D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+L\+I\+N\+ES, E\+N\+U\+M\+\_\+\+Txt\+Align alignment=Txt\+Align\+\_\+\+Default, bool new\+At\+Bottom=true, const \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} \&viewport\+Pos=\mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}}(), bool transparent\+Spaces=false)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a59589271b749a80386bf877f272b6a2b}\label{classAnsiGL_1_1InputWindow_a59589271b749a80386bf877f272b6a2b}} 
+virtual bool {\bfseries Enabled} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a9b46d17e58b74433a10be15a14161668}\label{classAnsiGL_1_1InputWindow_a9b46d17e58b74433a10be15a14161668}} 
+virtual void {\bfseries Enabled} (bool enabled)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_ada04462f16552a1bec0b340ac387c5c6}\label{classAnsiGL_1_1InputWindow_ada04462f16552a1bec0b340ac387c5c6}} 
+bool {\bfseries Capturing\+Color} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a2a5afedf3843d84a3b747440f32edd61}\label{classAnsiGL_1_1InputWindow_a2a5afedf3843d84a3b747440f32edd61}} 
+void {\bfseries Cancel\+Color\+Capture} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a12d681383626c28b86e5ccb954b4ec08}\label{classAnsiGL_1_1InputWindow_a12d681383626c28b86e5ccb954b4ec08}} 
+virtual void {\bfseries Set\+Color\+Codes} (const t\+Color\+Code $\ast$color\+Codes=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a306434b44f4eef31680fd91fcf75a4a9}\label{classAnsiGL_1_1InputWindow_a306434b44f4eef31680fd91fcf75a4a9}} 
+virtual void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a57e8a50ca9029d6b59b35e8c38914450}\label{classAnsiGL_1_1InputWindow_a57e8a50ca9029d6b59b35e8c38914450}} 
+virtual void {\bfseries Clear\+Contents} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a2835e13652ec04ed5e50de94b7d95839}\label{classAnsiGL_1_1InputWindow_a2835e13652ec04ed5e50de94b7d95839}} 
+virtual void {\bfseries Clear\+Input} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a5e127016aaed934b7e3ea8946807e366}\label{classAnsiGL_1_1InputWindow_a5e127016aaed934b7e3ea8946807e366}} 
+virtual const \mbox{\hyperlink{classAnsiGL_1_1InputText}{Input\+Text}} \& {\bfseries Cur\+Input} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_ac8d86797aaafe5b72619397b4dddedab}\label{classAnsiGL_1_1InputWindow_ac8d86797aaafe5b72619397b4dddedab}} 
+virtual void {\bfseries Input\+Char} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&ch)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_abff7d3126c44fd757e3cea3db9281423}\label{classAnsiGL_1_1InputWindow_abff7d3126c44fd757e3cea3db9281423}} 
+virtual void {\bfseries Input\+Line} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_aea773d8f5d3c6e9d20aa8f06372b1fe0}\label{classAnsiGL_1_1InputWindow_aea773d8f5d3c6e9d20aa8f06372b1fe0}} 
+bool {\bfseries \+\_\+\+Enabled}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_a805300eec47f4bd64da5e3c9e6141480}\label{classAnsiGL_1_1InputWindow_a805300eec47f4bd64da5e3c9e6141480}} 
+Input\+Text\+::\+Ptr {\bfseries \+\_\+\+Input}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1InputWindow_ab526d667527b057f5c1cbb4158b6d04d}\label{classAnsiGL_1_1InputWindow_ab526d667527b057f5c1cbb4158b6d04d}} 
+Text\+::\+Ptr {\bfseries \+\_\+\+Prompt}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/inputwindow.\+h\item 
+src/inputwindow.\+cpp\end{DoxyCompactItemize}

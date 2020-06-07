@@ -19,149 +19,241 @@
 
 namespace AnsiGL
 {
-	//
-	// A variable, just in case we want to easily change this behavior later
-	//
-	const bool TRANSPARENT_DEFAULT = false;
+    //
+    //! Whether surfaces are transparent by default or not.
+    //
+    const bool TRANSPARENT_DEFAULT = false;
 
 
-	//
-	// typedef to create our Scanline data type
-	//
-	typedef std::vector< Pixel >	Scanline;
+    //
+    //! typedef to create our Scanline data type
+    //
+    typedef std::vector< Pixel >	Scanline;
 
 
-	//
-	// The basis of all rendering targets in this library beyond astrings themselves
-	//
-	class Surface
-	{
-	public:
-		ANSIGL_POINTERS( Surface )
+    //! @class Surface
+    //! A Surface is a collection of pixels, arranged logically in a
+    //! rectangular format akin to any conventional rendering context
+    //! for any other graphics library. The pixel resolution of AnsiGL
+    //! is (as expected, I'm sure) a single term character.
+    class Surface
+    {
+    public:
+        ANSIGL_POINTERS( Surface )
 
-	public:
-		ColorPalette::Ptr	Palette;		// The color palette for this surface
-		bool				AutoPalette;	// On by default, determines if this surface will manage its own palette automatically
+        public:
+        ColorPalette::Ptr	Palette;		// The color palette
+                                                // for this surface
+        
+        bool				AutoPalette;	// On by
+                                                      // default,
+                                                      // determines if
+                                                      // this surface
+                                                      // will manage
+                                                      // its own
+                                                      // palette
+                                                      // automatically
 
-		ENUM_ColorDepth		DesiredDepth;	// 7Bit by default (16 foreground, 8 background colors)
+        ENUM_ColorDepth		DesiredDepth;	// 7Bit by default (16
+                                                // foreground, 8
+                                                // background colors)
 
-		int					TabSize;		// 8 by default, the number of spaces a tab character should represent (for std::strings drawn vertically, tabs are 1/4 this size, with a minimum of 1 space).  8 seems to be the tab size of most consoles I've encountered.
+        int					TabSize;		// 8 by default,
+                                                      // the number of
+                                                      // spaces a tab
+                                                      // character
+                                                      // should
+                                                      // represent
+                                                      // (for
+                                                      // std::strings
+                                                      // drawn
+                                                      // vertically,
+                                                      // tabs are 1/4
+                                                      // this size,
+                                                      // with a
+                                                      // minimum of 1
+                                                      // space).  8
+                                                      // seems to be
+                                                      // the tab size
+                                                      // of most
+                                                      // consoles I've
+                                                      // encountered.
 
-		bool				RenderANSI;		// On by default
-		bool				RenderBell;		// On by default (The bell character, '\007')
+        bool				RenderANSI;		// On by default
+        bool				RenderBell;		// On by default
+                                                      // (The bell
+                                                      // character,
+                                                      // '\007')
 
-		bool				UseCLS;			// Off by default, adds an ANSI clear screen code to the start of the surface rendering
+        bool				UseCLS;			// Off by
+                                                            // default,
+                                                            // adds an
+                                                            // ANSI
+                                                            // clear
+                                                            // screen
+                                                            // code to
+                                                            // the
+                                                            // start
+                                                            // of the
+                                                            // surface
+                                                            // rendering
 
-		bool				UseENDL;		// On by default, adds a endl character to the end of each line when rendering
-		bool				UseLF;			// Off by default, adds a '\n' at the end of each line when rendering
-		bool				UseCR;			// Off by default, adds a '\r' at the end of each line when rendering
+        bool				UseENDL;		// On by
+                                                      // default, adds
+                                                      // a endl
+                                                      // character to
+                                                      // the end of
+                                                      // each line
+                                                      // when
+                                                      // rendering
+        bool				UseLF;			// Off by
+                                                            // default,
+                                                            // adds a
+                                                            // '\n' at
+                                                            // the end
+                                                            // of each
+                                                            // line
+                                                            // when
+                                                            // rendering
+        
+        bool				UseCR;			// Off by
+                                                            // default,
+                                                            // adds a
+                                                            // '\r' at
+                                                            // the end
+                                                            // of each
+                                                            // line
+                                                            // when
+                                                            // rendering
 
-	public:
-		Surface():
-			AutoPalette(true),
-			DesiredDepth(ColorDepth_8Bit),
-			TabSize(8),
-			RenderANSI(true),
-			RenderBell(true),
-			UseCLS(false),
-			UseENDL(true),
-			UseLF(false),
-			UseCR(false)
-		{
-		}
+    public:
 
-		Surface( const Area2D &size ):
-			AutoPalette(true),
-			DesiredDepth(ColorDepth_8Bit),
-			TabSize(8),
-			RenderANSI(true),
-			RenderBell(true),
-			UseCLS(false),
-			UseENDL(true),
-			UseLF(false),
-			UseCR(false)
-		{
-			Resize( size );
-		}
+        //! Construct and initialize a Surface object with default
+        //! values.
+        Surface():
+            AutoPalette(true),
+            DesiredDepth(ColorDepth_8Bit),
+            TabSize(8),
+            RenderANSI(true),
+            RenderBell(true),
+            UseCLS(false),
+            UseENDL(true),
+            UseLF(false),
+            UseCR(false)
+        {
+        }
 
-		virtual ~Surface()
-		{
-		}
+        //! Construct and initialize a Surface object with an Area2D
+        //! object.
+        Surface( const Area2D &size ):
+            AutoPalette(true),
+            DesiredDepth(ColorDepth_8Bit),
+            TabSize(8),
+            RenderANSI(true),
+            RenderBell(true),
+            UseCLS(false),
+            UseENDL(true),
+            UseLF(false),
+            UseCR(false)
+        {
+            Resize( size );
+        }
 
-		// This is a little safer than direct access to our vector...
-		// This is preferred unless direct access is absolutely necessary (usually only for low-level rendering functions, etc.)
-		Scanline GetScanline( int lineNum ) const;
-		const achar &GetPixel( const Point2D &pixel ) const;
+        //! Destructor.
+        virtual ~Surface()
+        {
+        }
 
-		virtual const Area2D &Size() const;
-		virtual void Resize( Area2D size );
+        //! Get a line of information from a surface. This is a little
+        //! safer than direct access to our vector, and is preferred
+        //! unless direct access is absolutely necessary, usually only
+        //! for low-level rendering functions.
+        //!
+        
+        //! @param lineNum the vertical position of the surface from which to retrieve the scanline.
+        //! @return A Scanline object.
+        Scanline GetScanline( int lineNum ) const;
 
-		virtual const tSizeType Width() const;
-		virtual void Width( tSizeType width );
+        //! Get a pixel from within a surface.
+        //! @param Point2D The position within the surface from which
+        //! to retrieve the pixel.
+        //! @return An achar object.
+        const achar &GetPixel( const Point2D &pixel ) const;
 
-		virtual const tSizeType Height() const;
-		virtual void Height( tSizeType height );
+        //! Get the physical dimensions of the surface object as an
+        //! Area2D object.  @return An Area2D object.
+        virtual const Area2D &Size() const;
 
-		void Clear();
+        //! Resize the physical dimensions of the surface object to
+        //! the dimensions of the given Area2D object.
+        virtual void Resize( Area2D size );
 
-		bool HasPoint( const Point2D &pos ) const	// Returns true if this coordinate is within the bounds of this screen
-		{
-			return (pos.X() >= 0 && pos.X() < _Size.Width() && pos.Y() >= 0 && pos.Y() < _Size.Height());
-		}
+        virtual const tSizeType Width() const;
+        virtual void Width( tSizeType width );
 
-		void AddToPalette( ColorPalette::Ptr palette );	// Adds the contents of another color palette to ours (avoiding duplicate entries)
-		int FindColorIndex( const ColorDef &color );	// Finds the index of a color in our palette (adding the color to the palette if AutoPalette is on and it isn't already there)
-		ColorDef::Ptr FindColorFromIndex( int index ) const;	// Finds the color definition based on the provided index
+        virtual const tSizeType Height() const;
+        virtual void Height( tSizeType height );
 
-		//
-		// Render Functions
-		//
-		virtual std::string str();			// Calls Render() with ANSI off by default instead of on
-		virtual std::string Render() const;	// Converts this surface into a std::string
-		virtual void RenderToSurface( Surface::Ptr dest, const Point2D &point = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT ) const;	// Renders this surface to another surface
-		virtual void RenderAreaToSurface( FixedArea2D visibleArea, Surface::Ptr dest, const Point2D &point = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT ) const;	// Renders an area on this surface to another surface
+        void Clear();
 
+        bool HasPoint( const Point2D &pos ) const	// Returns true if this coordinate is within the bounds of this screen
+        {
+            return (pos.X() >= 0 && pos.X() < _Size.Width() && pos.Y() >= 0 && pos.Y() < _Size.Height());
+        }
 
-		//
-		// Draw*() Functions
-		//
-		// Each has a pos (position) parameter.  This is an offset from the origin (0,0) of the screen.
-		// Each has a transparentSpaces parameter.  When set, any space characters do not overwrite the previous character at that position.
-		// DrawString (and related) draw relative to the position parameter and do not attempt to wrap.  If they exceed the bounds of the screen, they will simply trunkate.
-		//
-		virtual void DrawChar( const achar &ach, const Point2D &point = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT );
-		virtual void DrawChar( const std::string &ch, const Point2D &point = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT );
+        void AddToPalette( ColorPalette::Ptr palette );	// Adds the contents of another color palette to ours (avoiding duplicate entries)
+        int FindColorIndex( const ColorDef &color );	// Finds the index of a color in our palette (adding the color to the palette if AutoPalette is on and it isn't already there)
+        ColorDef::Ptr FindColorFromIndex( int index ) const;	// Finds the color definition based on the provided index
 
-		//
-		// Strings...it's kinda like drawing lines
-		//
-		virtual void DrawString( const astring &str, const Point2D &pos = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT, bool invertString = false, bool rightToLeft = false, bool invertNewlineDir = false );
-		virtual void DrawString( const std::string &str, const Point2D &pos = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT, bool invertString = false, bool rightToLeft = false, bool invertNewlineDir = false );
-
-		virtual void DrawVString( const astring &str, const Point2D &pos = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT, bool invertString = false, bool bottomToTop = false, bool invertNewlineDir = false );
-		virtual void DrawVString( const std::string &str, const Point2D &po = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT, bool invertString = false, bool bottomToTop = false, bool invertNewlineDir = false );
-
-		//
-		// Extended drawing functions, boxes, etc.
-		//
-		virtual void FillGlyph( const Area2D &size, const uchar &glyph = uchar(), const Point2D &pos = Point2D() );
-		virtual void FillColor( const Area2D &size, const ColorDef &color = ColorDef(), const Point2D &pos = Point2D() );
-		virtual void FillChar( const Area2D &size, const achar &ach = achar(), const Point2D &pos = Point2D() );
-
-		virtual void DrawBox( const Area2D &box, const Point2D &pos = Point2D(), const achar &hBorder = achar("-"), const achar &vBorder = achar("|"), const achar &fillCh = achar(" "), bool transparentSpaces = TRANSPARENT_DEFAULT );
-
-	protected:
-		std::vector< Scanline >		_Pixels;	// NOTE: Direct access is via y,x (_Pixels[y][x]) rather than x,y!
-
-		Area2D						_Size;
-
-	protected:
-		bool pixelHasAnsi( const Point2D &pixel ) const;
-		std::string pixelRenderAnsi( const Point2D &pixel ) const;
-	};
+        //
+        // Render Functions
+        //
+        virtual std::string str();			// Calls Render() with ANSI off by default instead of on
+        virtual std::string Render() const;	// Converts this surface into a std::string
+        virtual void RenderToSurface( Surface::Ptr dest, const Point2D &point = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT ) const;	// Renders this surface to another surface
+        virtual void RenderAreaToSurface( FixedArea2D visibleArea, Surface::Ptr dest, const Point2D &point = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT ) const;	// Renders an area on this surface to another surface
 
 
-	std::ostream &operator<<( std::ostream &left, const Surface &right );
+        //
+        // Draw*() Functions
+        //
+        // Each has a pos (position) parameter.  This is an offset from the origin (0,0) of the screen.
+        // Each has a transparentSpaces parameter.  When set, any space characters do not overwrite the previous character at that position.
+        // DrawString (and related) draw relative to the position parameter and do not attempt to wrap.  If they exceed the bounds of the screen, they will simply trunkate.
+        //
+        virtual void DrawChar( const achar &ach, const Point2D &point = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT );
+        virtual void DrawChar( const std::string &ch, const Point2D &point = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT );
+
+        //
+        // Strings...it's kinda like drawing lines
+        //
+        virtual void DrawString( const astring &str, const Point2D &pos = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT, bool invertString = false, bool rightToLeft = false, bool invertNewlineDir = false );
+        virtual void DrawString( const std::string &str, const Point2D &pos = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT, bool invertString = false, bool rightToLeft = false, bool invertNewlineDir = false );
+
+        virtual void DrawVString( const astring &str, const Point2D &pos = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT, bool invertString = false, bool bottomToTop = false, bool invertNewlineDir = false );
+        virtual void DrawVString( const std::string &str, const Point2D &po = Point2D(), bool transparentSpaces = TRANSPARENT_DEFAULT, bool invertString = false, bool bottomToTop = false, bool invertNewlineDir = false );
+
+        //
+        // Extended drawing functions, boxes, etc.
+        //
+        virtual void FillGlyph( const Area2D &size, const uchar &glyph = uchar(), const Point2D &pos = Point2D() );
+        virtual void FillColor( const Area2D &size, const ColorDef &color = ColorDef(), const Point2D &pos = Point2D() );
+        virtual void FillChar( const Area2D &size, const achar &ach = achar(), const Point2D &pos = Point2D() );
+
+        virtual void DrawBox( const Area2D &box, const Point2D &pos = Point2D(), const achar &hBorder = achar("-"), const achar &vBorder = achar("|"), const achar &fillCh = achar(" "), bool transparentSpaces = TRANSPARENT_DEFAULT );
+
+    protected:
+        std::vector< Scanline >		_Pixels;	// NOTE: Direct access is via y,x (_Pixels[y][x]) rather than x,y!
+
+        Area2D						_Size;
+
+    protected:
+        bool pixelHasAnsi( const Point2D &pixel ) const;
+        std::string pixelRenderAnsi( const Point2D &pixel ) const;
+    };
+
+
+    std::ostream &operator<<( std::ostream &left, const Surface &right );
 }
 
 

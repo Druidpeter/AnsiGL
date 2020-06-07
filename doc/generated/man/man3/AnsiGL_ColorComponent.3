@@ -1,0 +1,87 @@
+.TH "AnsiGL::ColorComponent" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::ColorComponent
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBColorComponent\fP (ANSIColorPalette::Ptr palette)"
+.br
+.ti -1c
+.RI "\fBColorComponent\fP (ANSIColorPalette::Ptr palette, const \fBANSIColorDef\fP &color)"
+.br
+.ti -1c
+.RI "\fBColorComponent\fP (ENUM_ANSISystemColors color)"
+.br
+.ti -1c
+.RI "\fBColorComponent\fP (unsigned char r, unsigned char g, unsigned char b)"
+.br
+.ti -1c
+.RI "\fBColorComponent\fP (unsigned char grayscale)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBColorComponent\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBColorComponent\fP &right) const"
+.br
+.ti -1c
+.RI "ANSIColorPalette::Ptr \fBPalette\fP () const"
+.br
+.ti -1c
+.RI "void \fBPalette\fP (ANSIColorPalette::Ptr palette)"
+.br
+.ti -1c
+.RI "int \fBIndex\fP () const"
+.br
+.ti -1c
+.RI "void \fBSet\fP (ENUM_ANSISystemColors color)"
+.br
+.ti -1c
+.RI "void \fBSet\fP (unsigned char r, unsigned char g, unsigned char b)"
+.br
+.ti -1c
+.RI "void \fBSet\fP (unsigned char grayscale)"
+.br
+.ti -1c
+.RI "ANSIColorDef::Ptr \fBColor\fP () const"
+.br
+.ti -1c
+.RI "bool \fBIsColorless\fP () const"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBRender\fP (ENUM_ColorDepth desiredDepth, bool background=false) const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitMasterPalette\fP ()"
+.br
+.ti -1c
+.RI "void \fBassignMasterPalette\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "ANSIColorPalette::Ptr \fB_Palette\fP"
+.br
+.ti -1c
+.RI "int \fB_Index\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

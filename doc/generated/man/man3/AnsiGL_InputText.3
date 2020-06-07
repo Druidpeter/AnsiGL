@@ -1,0 +1,139 @@
+.TH "AnsiGL::InputText" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::InputText
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Content\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInputText\fP (tSizeType width, ENUM_TxtAlign alignment=TxtAlign_Default, ENUM_ColorDepth colorDepth=ColorDepth_Default, bool transparentSpaces=false, bool autoHeight=true)"
+.br
+.ti -1c
+.RI "\fBInputText\fP (const \fBastring\fP &text, tSizeType width=0, ENUM_TxtAlign alignment=TxtAlign_Default, ENUM_ColorDepth colorDepth=ColorDepth_Default, bool transparentSpaces=false, bool autoHeight=true)"
+.br
+.ti -1c
+.RI "\fBInputText\fP (const \fBustring\fP &text, tSizeType width=0, ENUM_TxtAlign alignment=TxtAlign_Default, ENUM_ColorDepth colorDepth=ColorDepth_Default, bool transparentSpaces=false, bool autoHeight=true)"
+.br
+.ti -1c
+.RI "\fBInputText\fP (const std::string &text, tSizeType width=0, ENUM_TxtAlign alignment=TxtAlign_Default, ENUM_ColorDepth colorDepth=ColorDepth_Default, bool transparentSpaces=false, bool autoHeight=true)"
+.br
+.ti -1c
+.RI "virtual void \fBFormat\fP ()"
+.br
+.ti -1c
+.RI "const \fBastring\fP & \fBValue\fP () const"
+.br
+.ti -1c
+.RI "const \fBastring\fP & \fBFormattedValue\fP () const"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.ti -1c
+.RI "ENUM_TxtAlign \fBAlign\fP () const"
+.br
+.ti -1c
+.RI "void \fBAlign\fP (ENUM_TxtAlign align)"
+.br
+.ti -1c
+.RI "virtual tSizeType \fBLength\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBEnabled\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBEnabled\fP (bool enabled)"
+.br
+.ti -1c
+.RI "bool \fBCapturingColor\fP () const"
+.br
+.ti -1c
+.RI "void \fBCancelColorCapture\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "const tColorCode * \fBColorCodes\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBSetColorCodes\fP (const tColorCode *colorCodes=NULL)"
+.br
+.ti -1c
+.RI "virtual void \fBInputChar\fP (const \fBachar\fP &ch)"
+.br
+.ti -1c
+.RI "virtual void \fBInputLine\fP (const \fBastring\fP &line)"
+.br
+.ti -1c
+.RI "virtual void \fBWidth\fP (tSizeType width)"
+.br
+.ti -1c
+.RI "virtual void \fBHeight\fP (tSizeType height)"
+.br
+.ti -1c
+.RI "virtual void \fBResize\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "virtual std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBRenderToSurface\fP (Surface::Ptr dest, const \fBPoint2D\fP &pos=\fBPoint2D\fP()) const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetCursorColor\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Context::Ptr \fB_Layout\fP"
+.br
+.ti -1c
+.RI "Text::Ptr \fB_Input\fP"
+.br
+.ti -1c
+.RI "Text::Ptr \fB_Cursor\fP"
+.br
+.ti -1c
+.RI "bool \fB_Enabled\fP"
+.br
+.ti -1c
+.RI "bool \fB_CaptureColor\fP"
+.br
+.ti -1c
+.RI "bool \fB_CaptureColorList\fP"
+.br
+.ti -1c
+.RI "std::string \fB_ColorBuffer\fP"
+.br
+.ti -1c
+.RI "\fBachar\fP \fB_CurColor\fP"
+.br
+.ti -1c
+.RI "unsigned int \fB_RemoveChars\fP"
+.br
+.ti -1c
+.RI "const tColorCode * \fB_ColorCodes\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

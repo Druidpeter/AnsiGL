@@ -1,0 +1,124 @@
+.TH "AnsiGL::ANSIColorDef" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::ANSIColorDef
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBANSIColorDef\fP (const \fBANSIColorDef\fP &color)"
+.br
+.ti -1c
+.RI "\fBANSIColorDef\fP (const std::string &name, ENUM_ANSISystemColors color)"
+.br
+.ti -1c
+.RI "\fBANSIColorDef\fP (const std::string &name, unsigned char r, unsigned char g, unsigned char b)"
+.br
+.ti -1c
+.RI "\fBANSIColorDef\fP (const std::string &name, unsigned char grayscale)"
+.br
+.ti -1c
+.RI "\fBANSIColorDef\fP (ENUM_ANSISystemColors color)"
+.br
+.ti -1c
+.RI "\fBANSIColorDef\fP (unsigned char r, unsigned char g, unsigned char b)"
+.br
+.ti -1c
+.RI "\fBANSIColorDef\fP (unsigned char grayscale)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBANSIColorDef\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBANSIColorDef\fP &right) const"
+.br
+.ti -1c
+.RI "const \fBANSICodeList\fP & \fBANSI\fP () const"
+.br
+.ti -1c
+.RI "unsigned char \fBIndex\fP () const"
+.br
+.ti -1c
+.RI "ENUM_ANSISystemColors \fBSystemColor\fP () const"
+.br
+.ti -1c
+.RI "void \fBSystemColor\fP (ENUM_ANSISystemColors color)"
+.br
+.ti -1c
+.RI "void \fBGetRGB\fP (unsigned char *r, unsigned char *g, unsigned char *b) const"
+.br
+.ti -1c
+.RI "void \fBSetRGB\fP (unsigned char r, unsigned char g, unsigned char b)"
+.br
+.ti -1c
+.RI "unsigned char \fBGrayscale\fP () const"
+.br
+.ti -1c
+.RI "void \fBGrayscale\fP (unsigned char grayscaleGradient)"
+.br
+.ti -1c
+.RI "bool \fBIsSysColor\fP () const"
+.br
+.ti -1c
+.RI "bool \fBIsRGB\fP () const"
+.br
+.ti -1c
+.RI "bool \fBIsGrayscale\fP () const"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBRender\fP (ENUM_ColorDepth desiredDepth=ColorDepth_Default, bool background=false) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBName\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcalculateIndexFromRGB\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalculateIndexFromGrayscale\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBANSICodeList\fP \fB_ANSI\fP"
+.br
+.ti -1c
+.RI "unsigned char \fB_Index\fP"
+.br
+.ti -1c
+.RI "ENUM_ANSISystemColors \fB_SystemColor\fP"
+.br
+.ti -1c
+.RI "unsigned char \fB_R\fP"
+.br
+.ti -1c
+.RI "unsigned char \fB_G\fP"
+.br
+.ti -1c
+.RI "unsigned char \fB_B\fP"
+.br
+.ti -1c
+.RI "unsigned char \fB_Grayscale\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

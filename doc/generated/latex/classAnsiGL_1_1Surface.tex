@@ -1,0 +1,220 @@
+\hypertarget{classAnsiGL_1_1Surface}{}\doxysection{Ansi\+GL\+::Surface Class Reference}
+\label{classAnsiGL_1_1Surface}\index{AnsiGL::Surface@{AnsiGL::Surface}}
+
+
+{\ttfamily \#include $<$surface.\+h$>$}
+
+Inheritance diagram for Ansi\+GL\+::Surface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAnsiGL_1_1Surface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAnsiGL_1_1Surface_a870594dda410b386e6b855ea2d2a4b64}{Surface}} ()
+\item 
+\mbox{\hyperlink{classAnsiGL_1_1Surface_a62ae9499c4fba922d5a98905e33a78a4}{Surface}} (const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&size)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a9179bfb997681b555dfa0d93c19f5940}\label{classAnsiGL_1_1Surface_a9179bfb997681b555dfa0d93c19f5940}} 
+virtual \mbox{\hyperlink{classAnsiGL_1_1Surface_a9179bfb997681b555dfa0d93c19f5940}{$\sim$\+Surface}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Scanline \mbox{\hyperlink{classAnsiGL_1_1Surface_a0e44701351dd1887d8534696ae6fc9f1}{Get\+Scanline}} (int line\+Num) const
+\item 
+const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \& \mbox{\hyperlink{classAnsiGL_1_1Surface_a773116c40cbb43484ad1ba2d9142eea0}{Get\+Pixel}} (const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pixel) const
+\item 
+virtual const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \& \mbox{\hyperlink{classAnsiGL_1_1Surface_a3252ded2ea9838bcfe5ff1063e6e418e}{Size}} () const
+\item 
+virtual void \mbox{\hyperlink{classAnsiGL_1_1Surface_ae096b205815b6f2ada568f875594ee06}{Resize}} (\mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} size)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a11f569ee8d465403f076cf03689728ea}\label{classAnsiGL_1_1Surface_a11f569ee8d465403f076cf03689728ea}} 
+virtual const t\+Size\+Type {\bfseries Width} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a224119680b6dd47264fbccfbb63376a3}\label{classAnsiGL_1_1Surface_a224119680b6dd47264fbccfbb63376a3}} 
+virtual void {\bfseries Width} (t\+Size\+Type width)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a182dab414fd21fa65633b82000941d65}\label{classAnsiGL_1_1Surface_a182dab414fd21fa65633b82000941d65}} 
+virtual const t\+Size\+Type {\bfseries Height} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a7c9c5220fd3869e95c98469ce94465fb}\label{classAnsiGL_1_1Surface_a7c9c5220fd3869e95c98469ce94465fb}} 
+virtual void {\bfseries Height} (t\+Size\+Type height)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_ad0bd1c51bd7a73c21f0203f5551a02b4}\label{classAnsiGL_1_1Surface_ad0bd1c51bd7a73c21f0203f5551a02b4}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a335459acb660c688b95bea0cd7125619}\label{classAnsiGL_1_1Surface_a335459acb660c688b95bea0cd7125619}} 
+bool {\bfseries Has\+Point} (const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a756eab933e76119f87efc189cd535161}\label{classAnsiGL_1_1Surface_a756eab933e76119f87efc189cd535161}} 
+void {\bfseries Add\+To\+Palette} (Color\+Palette\+::\+Ptr palette)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a5d05b3114bb161f0704e9d846ec30373}\label{classAnsiGL_1_1Surface_a5d05b3114bb161f0704e9d846ec30373}} 
+int {\bfseries Find\+Color\+Index} (const \mbox{\hyperlink{classAnsiGL_1_1ColorDef}{Color\+Def}} \&color)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_aecd178e136bab105367b24a02a9aea49}\label{classAnsiGL_1_1Surface_aecd178e136bab105367b24a02a9aea49}} 
+Color\+Def\+::\+Ptr {\bfseries Find\+Color\+From\+Index} (int index) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a648fdf7ded5633fc1785883b369e6034}\label{classAnsiGL_1_1Surface_a648fdf7ded5633fc1785883b369e6034}} 
+virtual std\+::string {\bfseries str} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a5aa60b94f219d1817c452ab763be799b}\label{classAnsiGL_1_1Surface_a5aa60b94f219d1817c452ab763be799b}} 
+virtual std\+::string {\bfseries Render} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a5392d85c3cb2b5a674206e090796b20e}\label{classAnsiGL_1_1Surface_a5392d85c3cb2b5a674206e090796b20e}} 
+virtual void {\bfseries Render\+To\+Surface} (Surface\+::\+Ptr dest, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&point=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_ae34a0f72ebdc8dc92dae410ee4608720}\label{classAnsiGL_1_1Surface_ae34a0f72ebdc8dc92dae410ee4608720}} 
+virtual void {\bfseries Render\+Area\+To\+Surface} (\mbox{\hyperlink{classAnsiGL_1_1FixedArea2D}{Fixed\+Area2D}} visible\+Area, Surface\+::\+Ptr dest, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&point=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a8aaab02c8472086ce7f46518ca249bc3}\label{classAnsiGL_1_1Surface_a8aaab02c8472086ce7f46518ca249bc3}} 
+virtual void {\bfseries Draw\+Char} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&ach, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&point=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a13b2bb1983aa4bd6460b7b5248bda0f8}\label{classAnsiGL_1_1Surface_a13b2bb1983aa4bd6460b7b5248bda0f8}} 
+virtual void {\bfseries Draw\+Char} (const std\+::string \&ch, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&point=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a2e28e038e5c47680a7e2eafe6d417287}\label{classAnsiGL_1_1Surface_a2e28e038e5c47680a7e2eafe6d417287}} 
+virtual void {\bfseries Draw\+String} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&str, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT, bool invert\+String=false, bool right\+To\+Left=false, bool invert\+Newline\+Dir=false)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_afe09991e6286816a47693a5a2f1d405e}\label{classAnsiGL_1_1Surface_afe09991e6286816a47693a5a2f1d405e}} 
+virtual void {\bfseries Draw\+String} (const std\+::string \&str, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT, bool invert\+String=false, bool right\+To\+Left=false, bool invert\+Newline\+Dir=false)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a58061635ebacbbdc2ea8a3b83ad6f7fb}\label{classAnsiGL_1_1Surface_a58061635ebacbbdc2ea8a3b83ad6f7fb}} 
+virtual void {\bfseries Draw\+V\+String} (const \mbox{\hyperlink{classAnsiGL_1_1astring}{astring}} \&str, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT, bool invert\+String=false, bool bottom\+To\+Top=false, bool invert\+Newline\+Dir=false)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a952204168814283880ddd85e269ae7c4}\label{classAnsiGL_1_1Surface_a952204168814283880ddd85e269ae7c4}} 
+virtual void {\bfseries Draw\+V\+String} (const std\+::string \&str, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&po=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT, bool invert\+String=false, bool bottom\+To\+Top=false, bool invert\+Newline\+Dir=false)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a8c1e4951d09f0891a9f38ea65c38ea21}\label{classAnsiGL_1_1Surface_a8c1e4951d09f0891a9f38ea65c38ea21}} 
+virtual void {\bfseries Fill\+Glyph} (const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&size, const \mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \&glyph=\mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}}(), const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}())
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_af0b58bac5ee8f70b10e9e7e7e3169f70}\label{classAnsiGL_1_1Surface_af0b58bac5ee8f70b10e9e7e7e3169f70}} 
+virtual void {\bfseries Fill\+Color} (const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&size, const \mbox{\hyperlink{classAnsiGL_1_1ColorDef}{Color\+Def}} \&color=\mbox{\hyperlink{classAnsiGL_1_1ColorDef}{Color\+Def}}(), const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}())
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a6abac63b40f69c2362684e1acd9be4d6}\label{classAnsiGL_1_1Surface_a6abac63b40f69c2362684e1acd9be4d6}} 
+virtual void {\bfseries Fill\+Char} (const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&size, const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&ach=\mbox{\hyperlink{classAnsiGL_1_1achar}{achar}}(), const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}())
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_ac7c2e400e0e7b6ae0a575b206c1fecfd}\label{classAnsiGL_1_1Surface_ac7c2e400e0e7b6ae0a575b206c1fecfd}} 
+virtual void {\bfseries Draw\+Box} (const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&box, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}(), const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&h\+Border=\mbox{\hyperlink{classAnsiGL_1_1achar}{achar}}(\char`\"{}-\/\char`\"{}), const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&v\+Border=\mbox{\hyperlink{classAnsiGL_1_1achar}{achar}}(\char`\"{}$\vert$\char`\"{}), const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&fill\+Ch=\mbox{\hyperlink{classAnsiGL_1_1achar}{achar}}(\char`\"{} \char`\"{}), bool transparent\+Spaces=T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a80730f134f7c10867be4c1c05fa21561}\label{classAnsiGL_1_1Surface_a80730f134f7c10867be4c1c05fa21561}} 
+Color\+Palette\+::\+Ptr {\bfseries Palette}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_aad95c5853dbd19a5e39fd44ebfee5323}\label{classAnsiGL_1_1Surface_aad95c5853dbd19a5e39fd44ebfee5323}} 
+bool {\bfseries Auto\+Palette}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a06af2a1652b46f80053cbd3fdbe716ef}\label{classAnsiGL_1_1Surface_a06af2a1652b46f80053cbd3fdbe716ef}} 
+E\+N\+U\+M\+\_\+\+Color\+Depth {\bfseries Desired\+Depth}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_aa7e9897799b2b0f0b9b15adce2c66196}\label{classAnsiGL_1_1Surface_aa7e9897799b2b0f0b9b15adce2c66196}} 
+int {\bfseries Tab\+Size}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a2e09f37263221bee401c8fb24f069013}\label{classAnsiGL_1_1Surface_a2e09f37263221bee401c8fb24f069013}} 
+bool {\bfseries Render\+A\+N\+SI}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a913b99b58661ca12d64174e812b7d061}\label{classAnsiGL_1_1Surface_a913b99b58661ca12d64174e812b7d061}} 
+bool {\bfseries Render\+Bell}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a7264dab1a1289555933cde1de74622f6}\label{classAnsiGL_1_1Surface_a7264dab1a1289555933cde1de74622f6}} 
+bool {\bfseries Use\+C\+LS}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a22a273f93cf7293217a618da862bd7c9}\label{classAnsiGL_1_1Surface_a22a273f93cf7293217a618da862bd7c9}} 
+bool {\bfseries Use\+E\+N\+DL}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a80b153e64e254391543b178fe93c00aa}\label{classAnsiGL_1_1Surface_a80b153e64e254391543b178fe93c00aa}} 
+bool {\bfseries Use\+LF}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_ab7e0c6606307210021d821857785aa31}\label{classAnsiGL_1_1Surface_ab7e0c6606307210021d821857785aa31}} 
+bool {\bfseries Use\+CR}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a56911ee42ea45c5d9054ed02c45217b7}\label{classAnsiGL_1_1Surface_a56911ee42ea45c5d9054ed02c45217b7}} 
+bool {\bfseries pixel\+Has\+Ansi} (const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pixel) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a3f90ff30a690b80abbc3429ff0032d96}\label{classAnsiGL_1_1Surface_a3f90ff30a690b80abbc3429ff0032d96}} 
+std\+::string {\bfseries pixel\+Render\+Ansi} (const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pixel) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a4558f7b35bb974763055775aac631317}\label{classAnsiGL_1_1Surface_a4558f7b35bb974763055775aac631317}} 
+std\+::vector$<$ Scanline $>$ {\bfseries \+\_\+\+Pixels}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_af2a6697b453799608a1fd32ac28ded15}\label{classAnsiGL_1_1Surface_af2a6697b453799608a1fd32ac28ded15}} 
+\mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} {\bfseries \+\_\+\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classAnsiGL_1_1Surface}{Surface}} is a collection of pixels, arranged logically in a rectangular format akin to any conventional rendering context for any other graphics library. The pixel resolution of Ansi\+GL is (as expected, I\textquotesingle{}m sure) a single term character. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a870594dda410b386e6b855ea2d2a4b64}\label{classAnsiGL_1_1Surface_a870594dda410b386e6b855ea2d2a4b64}} 
+\index{AnsiGL::Surface@{AnsiGL::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!AnsiGL::Surface@{AnsiGL::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ansi\+G\+L\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct and initialize a \mbox{\hyperlink{classAnsiGL_1_1Surface}{Surface}} object with default values. \mbox{\Hypertarget{classAnsiGL_1_1Surface_a62ae9499c4fba922d5a98905e33a78a4}\label{classAnsiGL_1_1Surface_a62ae9499c4fba922d5a98905e33a78a4}} 
+\index{AnsiGL::Surface@{AnsiGL::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!AnsiGL::Surface@{AnsiGL::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ansi\+G\+L\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct and initialize a \mbox{\hyperlink{classAnsiGL_1_1Surface}{Surface}} object with an \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a773116c40cbb43484ad1ba2d9142eea0}\label{classAnsiGL_1_1Surface_a773116c40cbb43484ad1ba2d9142eea0}} 
+\index{AnsiGL::Surface@{AnsiGL::Surface}!GetPixel@{GetPixel}}
+\index{GetPixel@{GetPixel}!AnsiGL::Surface@{AnsiGL::Surface}}
+\doxysubsubsection{\texorpdfstring{GetPixel()}{GetPixel()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \& Ansi\+G\+L\+::\+Surface\+::\+Get\+Pixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&}]{pixel }\end{DoxyParamCaption}) const}
+
+Get a pixel from within a surface. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}} & The position within the surface from which to retrieve the pixel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An achar object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_a0e44701351dd1887d8534696ae6fc9f1}\label{classAnsiGL_1_1Surface_a0e44701351dd1887d8534696ae6fc9f1}} 
+\index{AnsiGL::Surface@{AnsiGL::Surface}!GetScanline@{GetScanline}}
+\index{GetScanline@{GetScanline}!AnsiGL::Surface@{AnsiGL::Surface}}
+\doxysubsubsection{\texorpdfstring{GetScanline()}{GetScanline()}}
+{\footnotesize\ttfamily Scanline Ansi\+G\+L\+::\+Surface\+::\+Get\+Scanline (\begin{DoxyParamCaption}\item[{int}]{line\+Num }\end{DoxyParamCaption}) const}
+
+Get a line of information from a surface. This is a little safer than direct access to our vector, and is preferred unless direct access is absolutely necessary, usually only for low-\/level rendering functions. 
+\begin{DoxyParams}{Parameters}
+{\em line\+Num} & the vertical position of the surface from which to retrieve the scanline. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Scanline object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnsiGL_1_1Surface_ae096b205815b6f2ada568f875594ee06}\label{classAnsiGL_1_1Surface_ae096b205815b6f2ada568f875594ee06}} 
+\index{AnsiGL::Surface@{AnsiGL::Surface}!Resize@{Resize}}
+\index{Resize@{Resize}!AnsiGL::Surface@{AnsiGL::Surface}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily void Ansi\+G\+L\+::\+Surface\+::\+Resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Resize the physical dimensions of the surface object to the dimensions of the given \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} object. \mbox{\Hypertarget{classAnsiGL_1_1Surface_a3252ded2ea9838bcfe5ff1063e6e418e}\label{classAnsiGL_1_1Surface_a3252ded2ea9838bcfe5ff1063e6e418e}} 
+\index{AnsiGL::Surface@{AnsiGL::Surface}!Size@{Size}}
+\index{Size@{Size}!AnsiGL::Surface@{AnsiGL::Surface}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area}} \& Ansi\+G\+L\+::\+Surface\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the physical dimensions of the surface object as an \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} object. \begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/surface.\+h\item 
+src/surface.\+cpp\end{DoxyCompactItemize}

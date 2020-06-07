@@ -1,0 +1,93 @@
+.TH "AnsiGL::ColorPalette" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::ColorPalette
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::list< ColorDef::Ptr >::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef std::list< ColorDef::Ptr >::const_iterator \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef std::list< ColorDef::Ptr >::reverse_iterator \fBreverse_iterator\fP"
+.br
+.ti -1c
+.RI "typedef std::list< ColorDef::Ptr >::const_reverse_iterator \fBconst_reverse_iterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "ColorDef::Ptr \fBoperator[]\fP (int index)"
+.br
+.ti -1c
+.RI "const ColorDef::Ptr \fBoperator[]\fP (int index) const"
+.br
+.ti -1c
+.RI "iterator \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "iterator \fBend\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBend\fP () const"
+.br
+.ti -1c
+.RI "reverse_iterator \fBrbegin\fP ()"
+.br
+.ti -1c
+.RI "reverse_iterator \fBrend\fP ()"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBrbegin\fP () const"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBrend\fP () const"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP () const"
+.br
+.ti -1c
+.RI "void \fBpush_back\fP (ANSIColorDef::Ptr color)"
+.br
+.ti -1c
+.RI "int \fBAdd\fP (ColorDef::Ptr color)"
+.br
+.ti -1c
+.RI "void \fBRemove\fP (const \fBColorDef\fP &color)"
+.br
+.ti -1c
+.RI "void \fBRemove\fP (int index)"
+.br
+.ti -1c
+.RI "int \fBFindIndex\fP (const \fBColorDef\fP &color) const"
+.br
+.ti -1c
+.RI "void \fBInvertColors\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::list< ColorDef::Ptr > \fB_Colors\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

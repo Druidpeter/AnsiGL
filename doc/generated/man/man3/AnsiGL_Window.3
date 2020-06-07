@@ -1,0 +1,152 @@
+.TH "AnsiGL::Window" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Window
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Content\fP\&.
+.PP
+Inherited by \fBAnsiGL::TextWindow\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWindow\fP (const \fBastring\fP &windowTitle, const \fBArea2D\fP &windowSize=\fBArea2D\fP(80, 24), const \fBPoint3D\fP &viewportPos=\fBPoint3D\fP(), bool transparentSpaces=false)"
+.br
+.ti -1c
+.RI "virtual void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "virtual const \fBastring\fP & \fBTitle\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBTitle\fP (const \fBastring\fP &title)"
+.br
+.ti -1c
+.RI "virtual const \fBastring\fP & \fBStatusText\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBStatusText\fP (const \fBastring\fP &text)"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBWidth\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBWidth\fP (tSizeType width)"
+.br
+.ti -1c
+.RI "virtual const tSizeType \fBHeight\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBHeight\fP (tSizeType height)"
+.br
+.ti -1c
+.RI "virtual void \fBResize\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "virtual void \fBSetContentWidth\fP (tSizeType width)"
+.br
+.ti -1c
+.RI "virtual void \fBSetContentHeight\fP (tSizeType height)"
+.br
+.ti -1c
+.RI "virtual void \fBSetContentSize\fP (\fBArea2D\fP size)"
+.br
+.ti -1c
+.RI "virtual const \fBPoint3D\fP & \fBCurViewportPos\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBMoveViewportTo\fP (const \fBPoint3D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual void \fBMoveViewportTo\fP (const \fBPoint2D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual void \fBResizeViewport\fP (const \fBArea2D\fP &size)"
+.br
+.ti -1c
+.RI "virtual Context::Ptr \fBContents\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBAddContent\fP (Content::Ptr content, const \fBPoint3D\fP &pos=\fBPoint3D\fP())"
+.br
+.ti -1c
+.RI "virtual void \fBRemoveContent\fP (Content::Ptr content)"
+.br
+.ti -1c
+.RI "virtual void \fBRemoveContentFrom\fP (tPointType depth, Content::Ptr content)"
+.br
+.ti -1c
+.RI "virtual void \fBRecalculateTotalContentSize\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBRender\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBRenderToSurface\fP (Surface::Ptr dest, const \fBPoint2D\fP &pos=\fBPoint2D\fP()) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBTransparentSpaces\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBupdateWindow\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateWindowBorders\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateScrollbars\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateScrollbarSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateScrollbarPosition\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Surface::Ptr \fB_RenderBuf\fP"
+.br
+.ti -1c
+.RI "Context::Ptr \fB_Layout\fP"
+.br
+.ti -1c
+.RI "Text::Ptr \fB_Title\fP"
+.br
+.ti -1c
+.RI "Text::Ptr \fB_StatusText\fP"
+.br
+.ti -1c
+.RI "Context::Ptr \fB_Contents\fP"
+.br
+.ti -1c
+.RI "Image::Ptr \fB_Borders\fP"
+.br
+.ti -1c
+.RI "Image::Ptr \fB_VerticalScrollbar\fP"
+.br
+.ti -1c
+.RI "Image::Ptr \fB_HorizontalScrollbar\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

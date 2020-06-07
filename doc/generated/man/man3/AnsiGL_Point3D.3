@@ -1,0 +1,73 @@
+.TH "AnsiGL::Point3D" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Point3D
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Point2D\fP\&.
+.PP
+Inherited by \fBAnsiGL::ContentMarker\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPoint3D\fP (tPointType x, tPointType y, tPointType z)"
+.br
+.ti -1c
+.RI "\fBPoint3D\fP (const \fBPoint2D\fP &point)"
+.br
+.ti -1c
+.RI "\fBPoint3D\fP (tPointType x, tPointType y)"
+.br
+.ti -1c
+.RI "const tPointType & \fBZ\fP () const"
+.br
+.ti -1c
+.RI "void \fBZ\fP (tPointType z)"
+.br
+.ti -1c
+.RI "tPointType \fBIncZ\fP ()"
+.br
+.ti -1c
+.RI "tPointType \fBDecZ\fP ()"
+.br
+.ti -1c
+.RI "void \fBSet\fP (tPointType x, tPointType y, tPointType z)"
+.br
+.ti -1c
+.RI "\fBPoint3D\fP & \fBoperator+=\fP (const \fBPoint3D\fP &right)"
+.br
+.ti -1c
+.RI "\fBPoint3D\fP & \fBoperator\-=\fP (const \fBPoint3D\fP &right)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBPoint3D\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBPoint3D\fP &right) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "tPointType \fB_Z\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBPoint3D\fP \fBoperator+\fP (const \fBPoint3D\fP &left, const \fBPoint3D\fP &right)"
+.br
+.ti -1c
+.RI "\fBPoint3D\fP \fBoperator\-\fP (const \fBPoint3D\fP &left, const \fBPoint3D\fP &right)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

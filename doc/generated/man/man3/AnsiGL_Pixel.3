@@ -1,0 +1,118 @@
+.TH "AnsiGL::Pixel" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Pixel \- This class makes up the fundamental rendering unit of \fBAnsiGL::Surface\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pixel\&.h>\fP
+.PP
+Inherits \fBAnsiGL::uchar\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "const \fBANSICodeList\fP & \fBAttributes\fP () const"
+.br
+.ti -1c
+.RI "bool \fBHasAttribute\fP (ENUM_ANSICodes attrib) const"
+.br
+.ti -1c
+.RI "void \fBAddAttribute\fP (ENUM_ANSICodes attrib)"
+.br
+.ti -1c
+.RI "void \fBAddAttributes\fP (\fBANSICodeList\fP attributes)"
+.br
+.ti -1c
+.RI "void \fBRemoveAttribute\fP (ENUM_ANSICodes attrib)"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "void \fBClearAttributes\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBPaletteIndex\fP"
+.br
+.ti -1c
+.RI "bool \fBBell\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBANSICodeList\fP \fB_Attributes\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBSurface\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class makes up the fundamental rendering unit of \fBAnsiGL::Surface\fP\&. 
+
+A \fBPixel\fP is effectively an \fBAnsiGL::achar\fP that utilizes a color palette instead of storing the color information directly\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AnsiGL::Pixel::AddAttribute (ENUM_ANSICodes attrib)"
+Adds an ansi code attribute to the pixel, disallowing foreground and background colors\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattrib\fP The ANSI code to add\&. 
+.RE
+.PP
+
+.SS "void AnsiGL::Pixel::AddAttributes (\fBANSICodeList\fP attributes)"
+Adds a list of ANSI attributes to the pixel, disallowing foreground and background colors\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattributes\fP The list of attributes to add\&. 
+.RE
+.PP
+
+.SS "void AnsiGL::Pixel::Clear ()"
+Removes all attributes from the pixel and reset its state\&. 
+.SS "void AnsiGL::Pixel::ClearAttributes ()"
+Removes all attributes from the pixel, but does not reset its state\&. 
+.SS "bool AnsiGL::Pixel::HasAttribute (ENUM_ANSICodes attrib) const"
+Checks if the pixel has any ANSI attributes loaded into it that can be found in the enumerated list of ANSICodes given to it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattrib\fP The list of ANSI Codes to check against, as an enumeration\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A boolean value\&. True if the pixel has any matched attributes, false if none\&. 
+.RE
+.PP
+
+.SS "void AnsiGL::Pixel::RemoveAttribute (ENUM_ANSICodes attrib)"
+Removes an ANSI attribute from the pixel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattrib\fP The ANSI attribute to remove\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

@@ -1,0 +1,66 @@
+.TH "AnsiGL::Camera" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::Camera
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAnsiGL::Content\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCamera\fP (Context::Ptr context, const \fBArea2D\fP &viewportSize=\fBArea2D\fP(), const \fBPoint3D\fP &pos=\fBPoint3D\fP())"
+.br
+.ti -1c
+.RI "virtual \fBPoint3D\fP \fBCurCameraPos\fP () const"
+.br
+.ti -1c
+.RI "virtual tPointType \fBCameraX\fP () const"
+.br
+.ti -1c
+.RI "virtual tPointType \fBCameraY\fP () const"
+.br
+.ti -1c
+.RI "virtual tPointType \fBCameraZ\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBMoveCameraTo\fP (const \fBPoint3D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual void \fBMoveCameraTo\fP (const \fBPoint2D\fP &pos)"
+.br
+.ti -1c
+.RI "virtual Context::Ptr \fBGetContext\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBSetContext\fP (Context::Ptr context)"
+.br
+.ti -1c
+.RI "std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBRender\fP () const"
+.br
+.ti -1c
+.RI "void \fBRenderToSurface\fP (Surface::Ptr dest, const \fBPoint2D\fP &pos=\fBPoint2D\fP()) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Context::wPtr \fB_Context\fP"
+.br
+.ti -1c
+.RI "\fBPoint3D\fP \fB_Position\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

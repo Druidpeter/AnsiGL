@@ -1,0 +1,244 @@
+\hypertarget{classAnsiGL_1_1String}{}\doxysection{Ansi\+GL\+::String$<$ t\+Char\+Type $>$ Class Template Reference}
+\label{classAnsiGL_1_1String}\index{AnsiGL::String$<$ tCharType $>$@{AnsiGL::String$<$ tCharType $>$}}
+
+
+A std\+::string-\/esque foundation that allows for potentially elaborate glyphs.  
+
+
+
+
+{\ttfamily \#include $<$string.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a8de382dc29878b8d346d5388c9682d13}\label{classAnsiGL_1_1String_a8de382dc29878b8d346d5388c9682d13}} 
+typedef \mbox{\hyperlink{classAnsiGL_1_1String}{String}}$<$ t\+Char\+Type $>$ {\bfseries t\+String}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a96e90fb822d006b0cbe7706d9f28b612}\label{classAnsiGL_1_1String_a96e90fb822d006b0cbe7706d9f28b612}} 
+typedef std\+::vector$<$ t\+Char\+Type $>$ {\bfseries t\+Vector}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a61bd0a85c085d8432421261aed14ea28}\label{classAnsiGL_1_1String_a61bd0a85c085d8432421261aed14ea28}} 
+typedef t\+Vector\+::iterator {\bfseries iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_abc8efbd71f1dfcdfe8f53e545e6b3f83}\label{classAnsiGL_1_1String_abc8efbd71f1dfcdfe8f53e545e6b3f83}} 
+typedef t\+Vector\+::reverse\+\_\+iterator {\bfseries reverse\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a9c26e514a51472832ba0c83dab0bdcd8}\label{classAnsiGL_1_1String_a9c26e514a51472832ba0c83dab0bdcd8}} 
+typedef t\+Vector\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a725524f28810fe9c64415ad4726fd46d}\label{classAnsiGL_1_1String_a725524f28810fe9c64415ad4726fd46d}} 
+typedef t\+Vector\+::const\+\_\+reverse\+\_\+iterator {\bfseries const\+\_\+reverse\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a7fa32bdf24d43381190b5c369cd84790}\label{classAnsiGL_1_1String_a7fa32bdf24d43381190b5c369cd84790}} 
+{\bfseries String} (int reserve\+Size)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ae5894b381bfe974a40c53241f0ca541b}\label{classAnsiGL_1_1String_ae5894b381bfe974a40c53241f0ca541b}} 
+{\bfseries String} (const std\+::string \&str)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a03511e5e3c420b38c390cf585e8acb51}\label{classAnsiGL_1_1String_a03511e5e3c420b38c390cf585e8acb51}} 
+{\bfseries String} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a1f46998d569ca6ad1370d85dfcc72025}\label{classAnsiGL_1_1String_a1f46998d569ca6ad1370d85dfcc72025}} 
+t\+Char\+Type \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t pos)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a0015668735ed188c9548abe16b599bfc}\label{classAnsiGL_1_1String_a0015668735ed188c9548abe16b599bfc}} 
+const t\+Char\+Type \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t pos) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a97d76a1ee54214ad34ba298dc09549ae}\label{classAnsiGL_1_1String_a97d76a1ee54214ad34ba298dc09549ae}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a3416c44166bb5dffe9499cf2722fbdd2}\label{classAnsiGL_1_1String_a3416c44166bb5dffe9499cf2722fbdd2}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_aa1d3fca5b8e67aa98b4d4abdd086fbdb}\label{classAnsiGL_1_1String_aa1d3fca5b8e67aa98b4d4abdd086fbdb}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a55aadeffa538717816439557a50fff95}\label{classAnsiGL_1_1String_a55aadeffa538717816439557a50fff95}} 
+iterator {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a5d6935cd3d110b83bf5192208fee19b4}\label{classAnsiGL_1_1String_a5d6935cd3d110b83bf5192208fee19b4}} 
+iterator {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a29259d59964bed38d645c333f5a07468}\label{classAnsiGL_1_1String_a29259d59964bed38d645c333f5a07468}} 
+reverse\+\_\+iterator {\bfseries rbegin} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_adf137eb2df1af38c69d0ec3ac7a7fa07}\label{classAnsiGL_1_1String_adf137eb2df1af38c69d0ec3ac7a7fa07}} 
+reverse\+\_\+iterator {\bfseries rend} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_aded728292e230f89029bf5dfd4035476}\label{classAnsiGL_1_1String_aded728292e230f89029bf5dfd4035476}} 
+const\+\_\+iterator {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_af234ba3d96a4f3fae6e347499d77e5d8}\label{classAnsiGL_1_1String_af234ba3d96a4f3fae6e347499d77e5d8}} 
+const\+\_\+iterator {\bfseries end} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_af496c23d09eb35f850dbe158d85564e5}\label{classAnsiGL_1_1String_af496c23d09eb35f850dbe158d85564e5}} 
+const\+\_\+reverse\+\_\+iterator {\bfseries rbegin} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_acc7dff6a1ef3dffa7be96f797bf2f8bd}\label{classAnsiGL_1_1String_acc7dff6a1ef3dffa7be96f797bf2f8bd}} 
+const\+\_\+reverse\+\_\+iterator {\bfseries rend} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ab2988c15bd4eae5d548a00ebd66b954b}\label{classAnsiGL_1_1String_ab2988c15bd4eae5d548a00ebd66b954b}} 
+void {\bfseries append} (const \mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \&str)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a51c76691dcf4ee0faa49c88a52d96110}\label{classAnsiGL_1_1String_a51c76691dcf4ee0faa49c88a52d96110}} 
+void {\bfseries assign} (const \mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \&str)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a01de8468b9e25bb33aca8903970b3a7e}\label{classAnsiGL_1_1String_a01de8468b9e25bb33aca8903970b3a7e}} 
+bool {\bfseries compare} (const \mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a4f154d6baa4a974d02a86ec92be3c371}\label{classAnsiGL_1_1String_a4f154d6baa4a974d02a86ec92be3c371}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ab4f4b907e4f9bbe0be4d301991bc8d6e}\label{classAnsiGL_1_1String_ab4f4b907e4f9bbe0be4d301991bc8d6e}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_add3d4b3bc399739719bf762d512cc3b2}\label{classAnsiGL_1_1String_add3d4b3bc399739719bf762d512cc3b2}} 
+iterator {\bfseries insert} (iterator pos, const t\+Char\+Type \&x)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a16aa6132c84f99bf9988fec320008005}\label{classAnsiGL_1_1String_a16aa6132c84f99bf9988fec320008005}} 
+void {\bfseries insert} (iterator pos, size\+\_\+t n, const t\+Char\+Type \&x)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a77d2e0496a52049c71853657697c37bf}\label{classAnsiGL_1_1String_a77d2e0496a52049c71853657697c37bf}} 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\void {\bfseries insert} (iterator pos, Input\+Iterator first, Input\+Iterator last)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_af16dd25966246f818b022ecb08938619}\label{classAnsiGL_1_1String_af16dd25966246f818b022ecb08938619}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries erase} (size\+\_\+t pos=0, size\+\_\+t len=-\/1)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a0cd251c539457e7732bb03a40b8279aa}\label{classAnsiGL_1_1String_a0cd251c539457e7732bb03a40b8279aa}} 
+iterator {\bfseries erase} (const\+\_\+iterator pos)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a15155cd7e5ad72cc56a3dc1a2fcd8195}\label{classAnsiGL_1_1String_a15155cd7e5ad72cc56a3dc1a2fcd8195}} 
+iterator {\bfseries erase} (const\+\_\+iterator first, const\+\_\+iterator last)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_aad73c40c642836527bdfdf8c9706f306}\label{classAnsiGL_1_1String_aad73c40c642836527bdfdf8c9706f306}} 
+size\+\_\+t {\bfseries length} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a59d8b06e513f6768386d7edfb3bced6a}\label{classAnsiGL_1_1String_a59d8b06e513f6768386d7edfb3bced6a}} 
+void {\bfseries push\+\_\+back} (const t\+Char\+Type \&ch)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_aa9a2fdc09519215389e7556ed5a149ca}\label{classAnsiGL_1_1String_aa9a2fdc09519215389e7556ed5a149ca}} 
+void {\bfseries pop\+\_\+back} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ae3d569adf433fa09723f40a603e5af5e}\label{classAnsiGL_1_1String_ae3d569adf433fa09723f40a603e5af5e}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator=} (const char $\ast$right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a69f9a9c243b11fe4301e4eec6eb23a4b}\label{classAnsiGL_1_1String_a69f9a9c243b11fe4301e4eec6eb23a4b}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator=} (const std\+::string \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ae70aba1f44b913cb1103a358deeae830}\label{classAnsiGL_1_1String_ae70aba1f44b913cb1103a358deeae830}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator+=} (const char $\ast$right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ac178133e66c017fe46a451261de43493}\label{classAnsiGL_1_1String_ac178133e66c017fe46a451261de43493}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator+=} (const std\+::string \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a6822032819f42b9d73fadbac52470420}\label{classAnsiGL_1_1String_a6822032819f42b9d73fadbac52470420}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (bool val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_adab78040d9f3a9a43a30dc7223360518}\label{classAnsiGL_1_1String_adab78040d9f3a9a43a30dc7223360518}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (char val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ab4560ce59c21c878087076a885aaac7b}\label{classAnsiGL_1_1String_ab4560ce59c21c878087076a885aaac7b}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (unsigned char val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a1d5f66caa191c2b1814e72020885757b}\label{classAnsiGL_1_1String_a1d5f66caa191c2b1814e72020885757b}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (short val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a7112d9e2f0a01e2f15ad5f5a24d32f06}\label{classAnsiGL_1_1String_a7112d9e2f0a01e2f15ad5f5a24d32f06}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (unsigned short val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a0541db117aee388c7b157f9fa58e4736}\label{classAnsiGL_1_1String_a0541db117aee388c7b157f9fa58e4736}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (int val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_acf58bbd4c86217f42adf4b8df330c9a0}\label{classAnsiGL_1_1String_acf58bbd4c86217f42adf4b8df330c9a0}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (unsigned int val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_addb60fbdb9feff031b8cbcea233d96a8}\label{classAnsiGL_1_1String_addb60fbdb9feff031b8cbcea233d96a8}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (long val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a8054628520b1af395b5b4bb74a2954bd}\label{classAnsiGL_1_1String_a8054628520b1af395b5b4bb74a2954bd}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (unsigned long val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a6a4c14dbc2290245b2324d33d2174489}\label{classAnsiGL_1_1String_a6a4c14dbc2290245b2324d33d2174489}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (float val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a0e1d1f7c1f07a15b225dc8ac5677b69e}\label{classAnsiGL_1_1String_a0e1d1f7c1f07a15b225dc8ac5677b69e}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (double val)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a80bdba08463bd70945eb312a00d88672}\label{classAnsiGL_1_1String_a80bdba08463bd70945eb312a00d88672}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (const char $\ast$right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_aad9b05841729a361c544b4290782a15e}\label{classAnsiGL_1_1String_aad9b05841729a361c544b4290782a15e}} 
+\mbox{\hyperlink{classAnsiGL_1_1String}{t\+String}} \& {\bfseries operator$<$$<$} (const std\+::string \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ae9934e9fca83b2b28cf1d58e421eeca8}\label{classAnsiGL_1_1String_ae9934e9fca83b2b28cf1d58e421eeca8}} 
+bool {\bfseries operator==} (const std\+::string \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a226a6f36e4a0b764d2ecc35e9f6d7143}\label{classAnsiGL_1_1String_a226a6f36e4a0b764d2ecc35e9f6d7143}} 
+bool {\bfseries operator!=} (const std\+::string \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a12b2f343724cea8afd4cd1eb0de50eac}\label{classAnsiGL_1_1String_a12b2f343724cea8afd4cd1eb0de50eac}} 
+bool {\bfseries compare} (const std\+::string \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a462a5d70b3e2ec28a16323fb00b7ea62}\label{classAnsiGL_1_1String_a462a5d70b3e2ec28a16323fb00b7ea62}} 
+void {\bfseries push\+\_\+back} (char ch)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_abd230f989815077d7ba0ed5feaa8a3f6}\label{classAnsiGL_1_1String_abd230f989815077d7ba0ed5feaa8a3f6}} 
+virtual std\+::string \mbox{\hyperlink{classAnsiGL_1_1String_abd230f989815077d7ba0ed5feaa8a3f6}{Render}} () const
+\begin{DoxyCompactList}\small\item\em Renders to a standard std\+::string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a57abe79c5b7c6d06e16acca4de46c7d4}\label{classAnsiGL_1_1String_a57abe79c5b7c6d06e16acca4de46c7d4}} 
+virtual std\+::string {\bfseries str} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a2ed067b5971074d59b523e377c0afd0a}\label{classAnsiGL_1_1String_a2ed067b5971074d59b523e377c0afd0a}} 
+size\+\_\+t \mbox{\hyperlink{classAnsiGL_1_1String_a2ed067b5971074d59b523e377c0afd0a}{Num\+Lines}} () const
+\begin{DoxyCompactList}\small\item\em Reports the current number of lines in this string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a531bfee628c06a8c1dfccdea8b2a9151}\label{classAnsiGL_1_1String_a531bfee628c06a8c1dfccdea8b2a9151}} 
+virtual void \mbox{\hyperlink{classAnsiGL_1_1String_a531bfee628c06a8c1dfccdea8b2a9151}{Remove\+Leading\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Eats the whitespace at the front of the string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_ab0ecf1dd95ccfc138e4e9e5a9290561a}\label{classAnsiGL_1_1String_ab0ecf1dd95ccfc138e4e9e5a9290561a}} 
+virtual void \mbox{\hyperlink{classAnsiGL_1_1String_ab0ecf1dd95ccfc138e4e9e5a9290561a}{Remove\+Trailing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Eats the whitespace at the end of the string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_acfca2b963cbcd35d2ee2e9f4072c4756}\label{classAnsiGL_1_1String_acfca2b963cbcd35d2ee2e9f4072c4756}} 
+virtual void \mbox{\hyperlink{classAnsiGL_1_1String_acfca2b963cbcd35d2ee2e9f4072c4756}{To\+Upper}} ()
+\begin{DoxyCompactList}\small\item\em Capitalizes everything in the string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_aa0dcc5363eebd40af13457a494a8a773}\label{classAnsiGL_1_1String_aa0dcc5363eebd40af13457a494a8a773}} 
+virtual void \mbox{\hyperlink{classAnsiGL_1_1String_aa0dcc5363eebd40af13457a494a8a773}{To\+Lower}} ()
+\begin{DoxyCompactList}\small\item\em Lowercases (is this even a word?) everything the string. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classAnsiGL_1_1String_aa9bd4b29dacf061333cc139109d0f447}{Capitalize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a2665f2c5c328c1934d3746d19684833e}\label{classAnsiGL_1_1String_a2665f2c5c328c1934d3746d19684833e}} 
+{\footnotesize template$<$typename t\+Data\+Type $>$ }\\\mbox{\hyperlink{classAnsiGL_1_1ustring}{ustring}} \& {\bfseries add\+To\+Stream} (t\+Data\+Type val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1String_a60846c4fc4803b3cda3ea802b6684f93}\label{classAnsiGL_1_1String_a60846c4fc4803b3cda3ea802b6684f93}} 
+t\+Vector {\bfseries \+\_\+\+String}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename t\+Char\+Type$>$\newline
+class Ansi\+G\+L\+::\+String$<$ t\+Char\+Type $>$}
+
+A std\+::string-\/esque foundation that allows for potentially elaborate glyphs. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAnsiGL_1_1String_aa9bd4b29dacf061333cc139109d0f447}\label{classAnsiGL_1_1String_aa9bd4b29dacf061333cc139109d0f447}} 
+\index{AnsiGL::String$<$ tCharType $>$@{AnsiGL::String$<$ tCharType $>$}!Capitalize@{Capitalize}}
+\index{Capitalize@{Capitalize}!AnsiGL::String$<$ tCharType $>$@{AnsiGL::String$<$ tCharType $>$}}
+\doxysubsubsection{\texorpdfstring{Capitalize()}{Capitalize()}}
+{\footnotesize\ttfamily template$<$typename t\+Char\+Type$>$ \\
+virtual void \mbox{\hyperlink{classAnsiGL_1_1String}{Ansi\+G\+L\+::\+String}}$<$ t\+Char\+Type $>$\+::Capitalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Capitalize the first character of the string (maybe expand to after periods as well? But what about abbreviations?...) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/string.\+h\end{DoxyCompactItemize}

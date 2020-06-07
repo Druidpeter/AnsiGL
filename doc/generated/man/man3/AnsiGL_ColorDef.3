@@ -1,0 +1,56 @@
+.TH "AnsiGL::ColorDef" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::ColorDef
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBColorDef\fP (const \fBColorComponent\fP &fg, const \fBColorComponent\fP &bg)"
+.br
+.ti -1c
+.RI "\fBColorDef\fP (const \fBColorComponent\fP &fg, const \fBColorComponent\fP &bg, bool inverted)"
+.br
+.ti -1c
+.RI "\fBColorDef\fP (ENUM_ANSISystemColors fg, ENUM_ANSISystemColors bg)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBColorDef\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBColorDef\fP &right) const"
+.br
+.ti -1c
+.RI "bool \fBIsColorless\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetPalette\fP (ANSIColorPalette::Ptr palette)"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBRender\fP (ENUM_ColorDepth desiredDepth=ColorDepth_7Bit) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBColorComponent\fP \fBFG\fP"
+.br
+.ti -1c
+.RI "\fBColorComponent\fP \fBBG\fP"
+.br
+.ti -1c
+.RI "bool \fBInverted\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

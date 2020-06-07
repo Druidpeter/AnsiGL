@@ -89,7 +89,7 @@ namespace AnsiGL
     return ConvertColorCodes( str, achar(), colorCodes );
   }
 
-  //! Converts ansigl color codes to platform specific color codes.
+  //! Converts ansigl color codes to platform specific color codes. I *think*? -- Druidpeter
   
   astring ConvertColorCodes( const ustring &str, const achar &initialANSIState, const tColorCode *colorCodes )
   {
@@ -998,5 +998,3 @@ namespace AnsiGL
 
 // vim: tabstop=4 shiftwidth=4
 // astyle: --indent=tab=4 --style=ansi --indent-namespaces --indent-cases --indent-switches --pad-oper
-
-

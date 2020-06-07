@@ -1,0 +1,65 @@
+.TH "AnsiGL::ncurses" 3 "Sun Jun 7 2020" "Version v0.2" "AnsiGL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnsiGL::ncurses
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< ColorDef::Ptr, int > \fBtColorPalette\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBncurses\fP (bool setLocale=true)"
+.br
+.ti -1c
+.RI "\fBArea2D\fP \fBSize\fP () const"
+.br
+.ti -1c
+.RI "void \fBRefresh\fP (Context::Ptr content=NULL)"
+.br
+.ti -1c
+.RI "int \fBGetCh\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBColorPair\fP (const \fBColorDef\fP &color)"
+.br
+.ti -1c
+.RI "static void \fBRenderSurface\fP (Surface::Ptr src, WINDOW *dest, \fBPoint2D\fP pos=\fBPoint2D\fP(0, 0), bool transparentSpaces=TRANSPARENT_DEFAULT)"
+.br
+.ti -1c
+.RI "static attr_t \fBAttributes\fP (const \fBachar\fP &ach)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static tColorPalette \fBColorPalette\fP"
+.br
+.ti -1c
+.RI "static constexpr short \fBDEFAULT_COLOR_PAIR\fP = 1"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Surface::Ptr \fB_Screen\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AnsiGL from the source code\&.

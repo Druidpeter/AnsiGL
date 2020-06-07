@@ -1,0 +1,110 @@
+\hypertarget{classAnsiGL_1_1uchar}{}\doxysection{Ansi\+GL\+::uchar Class Reference}
+\label{classAnsiGL_1_1uchar}\index{AnsiGL::uchar@{AnsiGL::uchar}}
+
+
+An encapsulation of a unicode character. A U\+T\+F-\/8 \textquotesingle{}char\textquotesingle{} always of the same physical width(1) regardless of the width of its glyph.  
+
+
+
+
+{\ttfamily \#include $<$uchar.\+h$>$}
+
+Inheritance diagram for Ansi\+GL\+::uchar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAnsiGL_1_1uchar}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a4324dc9bf2425671755de209484fa8ac}\label{classAnsiGL_1_1uchar_a4324dc9bf2425671755de209484fa8ac}} 
+\mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \& {\bfseries operator=} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a73a759f7f7418c43e46b62f309aa8a01}\label{classAnsiGL_1_1uchar_a73a759f7f7418c43e46b62f309aa8a01}} 
+\mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \& {\bfseries operator=} (const std\+::string \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_ae9003c75f2956a74d748360d6eb25918}\label{classAnsiGL_1_1uchar_ae9003c75f2956a74d748360d6eb25918}} 
+\mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \& {\bfseries operator=} (const unsigned char \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a2e349b0cb3c13bbf30207b2dbfc1e360}\label{classAnsiGL_1_1uchar_a2e349b0cb3c13bbf30207b2dbfc1e360}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_ac9e0e0850ffaa45d510eb58809d0b5e4}\label{classAnsiGL_1_1uchar_ac9e0e0850ffaa45d510eb58809d0b5e4}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a729bd56fb7601e2e8c26021507e8b3ee}\label{classAnsiGL_1_1uchar_a729bd56fb7601e2e8c26021507e8b3ee}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a242e3c6582af6958e8336d190a43fb17}\label{classAnsiGL_1_1uchar_a242e3c6582af6958e8336d190a43fb17}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_adcc39a849b6c1f653c9f65aeb0af197a}\label{classAnsiGL_1_1uchar_adcc39a849b6c1f653c9f65aeb0af197a}} 
+bool {\bfseries operator==} (const std\+::string \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a5bd3f050e4760de69e5c6ddd39c34ba7}\label{classAnsiGL_1_1uchar_a5bd3f050e4760de69e5c6ddd39c34ba7}} 
+bool {\bfseries operator!=} (const std\+::string \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a7c5382a1b4894bca0ae4c47cedadc138}\label{classAnsiGL_1_1uchar_a7c5382a1b4894bca0ae4c47cedadc138}} 
+bool {\bfseries operator==} (const unsigned char \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_ad6182a3245bf39fcf9c53627b15a4841}\label{classAnsiGL_1_1uchar_ad6182a3245bf39fcf9c53627b15a4841}} 
+bool {\bfseries operator!=} (const unsigned char \&right) const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_aebeaebc7b919063bd5d4ebf45b836800}\label{classAnsiGL_1_1uchar_aebeaebc7b919063bd5d4ebf45b836800}} 
+void {\bfseries Glyph} (const \mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \&glyph)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a3d4e61ac8131add3f7131cefdd358083}\label{classAnsiGL_1_1uchar_a3d4e61ac8131add3f7131cefdd358083}} 
+void {\bfseries Glyph} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&glyph)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a8ba6fd14d36c953153ef348bffb6aaa1}\label{classAnsiGL_1_1uchar_a8ba6fd14d36c953153ef348bffb6aaa1}} 
+void \mbox{\hyperlink{classAnsiGL_1_1uchar_a8ba6fd14d36c953153ef348bffb6aaa1}{Glyph}} (const std\+::string \&glyph)
+\begin{DoxyCompactList}\small\item\em Takes the first valid U\+T\+F-\/8 character and assigns it as our glyph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_ab62b202d8dfcd1fbae4713f88650ddf7}\label{classAnsiGL_1_1uchar_ab62b202d8dfcd1fbae4713f88650ddf7}} 
+void {\bfseries Glyph} (unsigned char glyph)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a2dcde460774fb38747d7d81d5f99999b}\label{classAnsiGL_1_1uchar_a2dcde460774fb38747d7d81d5f99999b}} 
+{\bfseries uchar} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&glyph)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a79177e0073c7cdb1b21734c273a822d5}\label{classAnsiGL_1_1uchar_a79177e0073c7cdb1b21734c273a822d5}} 
+{\bfseries uchar} (const std\+::string \&glyph)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_ad309c61d135d7d9d2d1ecad632d3c545}\label{classAnsiGL_1_1uchar_ad309c61d135d7d9d2d1ecad632d3c545}} 
+{\bfseries uchar} (unsigned char glyph)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a459230983f571c195d405837119768aa}\label{classAnsiGL_1_1uchar_a459230983f571c195d405837119768aa}} 
+char \& {\bfseries operator$<$$<$} (const \mbox{\hyperlink{classAnsiGL_1_1achar}{achar}} \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a3e65c7c68eb0af842c06cd504f8e9600}\label{classAnsiGL_1_1uchar_a3e65c7c68eb0af842c06cd504f8e9600}} 
+\mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \& {\bfseries operator$<$$<$} (const std\+::string \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_aebacb092c823e403eb31c4742a21b18e}\label{classAnsiGL_1_1uchar_aebacb092c823e403eb31c4742a21b18e}} 
+\mbox{\hyperlink{classAnsiGL_1_1uchar}{uchar}} \& {\bfseries operator$<$$<$} (const unsigned char \&right)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a778dab640a37d93c52d0e5422b9c9653}\label{classAnsiGL_1_1uchar_a778dab640a37d93c52d0e5422b9c9653}} 
+const std\+::string \& {\bfseries Glyph} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a784204fc7a0b8e3eaf1130b7565eb151}\label{classAnsiGL_1_1uchar_a784204fc7a0b8e3eaf1130b7565eb151}} 
+bool \mbox{\hyperlink{classAnsiGL_1_1uchar_a784204fc7a0b8e3eaf1130b7565eb151}{Is\+Space}} () const
+\begin{DoxyCompactList}\small\item\em Returns \textquotesingle{}true\textquotesingle{} if the glyph is whitespace. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_a43706246613545f00dc1cc9cade58b92}\label{classAnsiGL_1_1uchar_a43706246613545f00dc1cc9cade58b92}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_af7cb81bbfba650024fb0a29e7a687f3b}\label{classAnsiGL_1_1uchar_af7cb81bbfba650024fb0a29e7a687f3b}} 
+const std\+::string \& \mbox{\hyperlink{classAnsiGL_1_1uchar_af7cb81bbfba650024fb0a29e7a687f3b}{Render}} () const
+\begin{DoxyCompactList}\small\item\em Simply returns the glyph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1uchar_ac6f1fc83364b42b116bac89ea30f1768}\label{classAnsiGL_1_1uchar_ac6f1fc83364b42b116bac89ea30f1768}} 
+std\+::string {\bfseries \+\_\+\+U\+T\+F8}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An encapsulation of a unicode character. A U\+T\+F-\/8 \textquotesingle{}char\textquotesingle{} always of the same physical width(1) regardless of the width of its glyph. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/uchar.\+h\item 
+src/uchar.\+cpp\end{DoxyCompactItemize}

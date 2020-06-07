@@ -1,0 +1,63 @@
+\hypertarget{classAnsiGL_1_1Camera}{}\doxysection{Ansi\+GL\+::Camera Class Reference}
+\label{classAnsiGL_1_1Camera}\index{AnsiGL::Camera@{AnsiGL::Camera}}
+Inheritance diagram for Ansi\+GL\+::Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAnsiGL_1_1Camera}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_a36e1e6d9fed7a8b9b5a4557799b9d4c0}\label{classAnsiGL_1_1Camera_a36e1e6d9fed7a8b9b5a4557799b9d4c0}} 
+{\bfseries Camera} (Context\+::\+Ptr context, const \mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}} \&viewport\+Size=\mbox{\hyperlink{classAnsiGL_1_1Area2D}{Area2D}}(), const \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}}())
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_a32136a7ee4dd033ff560cd4780fdf0fa}\label{classAnsiGL_1_1Camera_a32136a7ee4dd033ff560cd4780fdf0fa}} 
+virtual \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} {\bfseries Cur\+Camera\+Pos} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_af03bdc58833877028607990218c8a18d}\label{classAnsiGL_1_1Camera_af03bdc58833877028607990218c8a18d}} 
+virtual t\+Point\+Type {\bfseries CameraX} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_ab8eea80662d4552ef85d2f68d7c3f09e}\label{classAnsiGL_1_1Camera_ab8eea80662d4552ef85d2f68d7c3f09e}} 
+virtual t\+Point\+Type {\bfseries CameraY} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_a1d6acaa37df533e9f07e48ee138556ca}\label{classAnsiGL_1_1Camera_a1d6acaa37df533e9f07e48ee138556ca}} 
+virtual t\+Point\+Type {\bfseries CameraZ} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_a4dad834649d60b56159eb273c3944e57}\label{classAnsiGL_1_1Camera_a4dad834649d60b56159eb273c3944e57}} 
+virtual void {\bfseries Move\+Camera\+To} (const \mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} \&pos)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_ae1cbb540aa48b78a17f5b343bfe05b47}\label{classAnsiGL_1_1Camera_ae1cbb540aa48b78a17f5b343bfe05b47}} 
+virtual void {\bfseries Move\+Camera\+To} (const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_a5aae563d145eddfeea5c85993c433157}\label{classAnsiGL_1_1Camera_a5aae563d145eddfeea5c85993c433157}} 
+virtual Context\+::\+Ptr {\bfseries Get\+Context} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_aad9dc1457879438a1383a262b6972856}\label{classAnsiGL_1_1Camera_aad9dc1457879438a1383a262b6972856}} 
+virtual void {\bfseries Set\+Context} (Context\+::\+Ptr context)
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_aea4f607dd1b34aad0728c0ca5f5c41fa}\label{classAnsiGL_1_1Camera_aea4f607dd1b34aad0728c0ca5f5c41fa}} 
+std\+::string {\bfseries str} ()
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_a1f2354805dbf503baf77631c40f9c18b}\label{classAnsiGL_1_1Camera_a1f2354805dbf503baf77631c40f9c18b}} 
+std\+::string {\bfseries Render} () const
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_aa3906a6eaa6c5488ef9040f8960ff56b}\label{classAnsiGL_1_1Camera_aa3906a6eaa6c5488ef9040f8960ff56b}} 
+void {\bfseries Render\+To\+Surface} (Surface\+::\+Ptr dest, const \mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}} \&pos=\mbox{\hyperlink{classAnsiGL_1_1Point2D}{Point2D}}()) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_a01b9ff4a64b26c072c4960a52b62ffa4}\label{classAnsiGL_1_1Camera_a01b9ff4a64b26c072c4960a52b62ffa4}} 
+Context\+::w\+Ptr {\bfseries \+\_\+\+Context}
+\item 
+\mbox{\Hypertarget{classAnsiGL_1_1Camera_a18867ec6103e523dc59fb230b2a615fa}\label{classAnsiGL_1_1Camera_a18867ec6103e523dc59fb230b2a615fa}} 
+\mbox{\hyperlink{classAnsiGL_1_1Point3D}{Point3D}} {\bfseries \+\_\+\+Position}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/camera.\+h\item 
+src/camera.\+cpp\end{DoxyCompactItemize}
